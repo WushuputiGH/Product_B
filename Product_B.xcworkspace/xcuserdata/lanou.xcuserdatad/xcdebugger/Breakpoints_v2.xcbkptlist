@@ -161,13 +161,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Product_B/NearByTableViewController.m"
-            timestampString = "490621677.057205"
+            filePath = "Product_B/User/Controller/SetUserViewController.m"
+            timestampString = "490760995.65955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "263"
-            endingLineNumber = "263"
-            landmarkName = "-viewDidAppear:"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
+            landmarkName = "-commitButton:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -177,13 +177,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Product_B/NearByTableViewController.m"
-            timestampString = "490621677.057205"
+            filePath = "Product_B/User/Controller/SignUpViewController.m"
+            timestampString = "490760643.072965"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "268"
-            endingLineNumber = "268"
-            landmarkName = "-viewWillDisappear:"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "-signUp:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Product_B/User/Controller/SignUpViewController.m"
+            timestampString = "490760680.016032"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "-captcha:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -20,6 +20,12 @@
 		791C413F1D368A0200C1C672 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 791C413E1D368A0200C1C672 /* User.m */; };
 		791C41421D36903400C1C672 /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = 791C41411D36903400C1C672 /* Review.m */; };
 		791C41451D36905F00C1C672 /* Poi.m in Sources */ = {isa = PBXBuildFile; fileRef = 791C41441D36905F00C1C672 /* Poi.m */; };
+		7925D3C81D407365009ECAE5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7925D3C71D407365009ECAE5 /* LoginViewController.m */; };
+		792B4D601D3FA7D200CD5F27 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792B4D5D1D3FA7D200CD5F27 /* SignUpViewController.m */; };
+		792B4D641D3FA80E00CD5F27 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792B4D631D3FA80E00CD5F27 /* UserViewController.m */; };
+		792B4D661D3FBF3100CD5F27 /* house2.png in Resources */ = {isa = PBXBuildFile; fileRef = 792B4D651D3FBF3100CD5F27 /* house2.png */; };
+		792B4D681D3FC01300CD5F27 /* carmear.png in Resources */ = {isa = PBXBuildFile; fileRef = 792B4D671D3FC01300CD5F27 /* carmear.png */; };
+		792B4D6B1D3FC3CE00CD5F27 /* SetUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792B4D6A1D3FC3CE00CD5F27 /* SetUserViewController.m */; };
 		7933EB791D38850A0072B64D /* ReviewListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7933EB781D38850A0072B64D /* ReviewListModel.m */; };
 		7933EB7D1D38890C0072B64D /* ReviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7933EB7B1D38890C0072B64D /* ReviewTableViewCell.m */; };
 		7933EB7E1D38890C0072B64D /* ReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7933EB7C1D38890C0072B64D /* ReviewTableViewCell.xib */; };
@@ -155,6 +161,16 @@
 		791C41411D36903400C1C672 /* Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Review.m; sourceTree = "<group>"; };
 		791C41431D36905F00C1C672 /* Poi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Poi.h; sourceTree = "<group>"; };
 		791C41441D36905F00C1C672 /* Poi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Poi.m; sourceTree = "<group>"; };
+		7925D3C61D407365009ECAE5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		7925D3C71D407365009ECAE5 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		792B4D5C1D3FA7D200CD5F27 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		792B4D5D1D3FA7D200CD5F27 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		792B4D621D3FA80E00CD5F27 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		792B4D631D3FA80E00CD5F27 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		792B4D651D3FBF3100CD5F27 /* house2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = house2.png; sourceTree = "<group>"; };
+		792B4D671D3FC01300CD5F27 /* carmear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carmear.png; sourceTree = "<group>"; };
+		792B4D691D3FC3CE00CD5F27 /* SetUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetUserViewController.h; sourceTree = "<group>"; };
+		792B4D6A1D3FC3CE00CD5F27 /* SetUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetUserViewController.m; sourceTree = "<group>"; };
 		7933EB771D38850A0072B64D /* ReviewListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewListModel.h; sourceTree = "<group>"; };
 		7933EB781D38850A0072B64D /* ReviewListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewListModel.m; sourceTree = "<group>"; };
 		7933EB7A1D38890C0072B64D /* ReviewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewTableViewCell.h; sourceTree = "<group>"; };
@@ -419,6 +435,45 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		792B4D521D3FA71300CD5F27 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				792B4D531D3FA71300CD5F27 /* Controller */,
+				792B4D541D3FA71300CD5F27 /* Model */,
+				792B4D551D3FA71300CD5F27 /* View */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		792B4D531D3FA71300CD5F27 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				792B4D621D3FA80E00CD5F27 /* UserViewController.h */,
+				792B4D631D3FA80E00CD5F27 /* UserViewController.m */,
+				7925D3C61D407365009ECAE5 /* LoginViewController.h */,
+				7925D3C71D407365009ECAE5 /* LoginViewController.m */,
+				792B4D5C1D3FA7D200CD5F27 /* SignUpViewController.h */,
+				792B4D5D1D3FA7D200CD5F27 /* SignUpViewController.m */,
+				792B4D691D3FC3CE00CD5F27 /* SetUserViewController.h */,
+				792B4D6A1D3FC3CE00CD5F27 /* SetUserViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		792B4D541D3FA71300CD5F27 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		792B4D551D3FA71300CD5F27 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7933EB8A1D38E68F0072B64D /* Third */ = {
 			isa = PBXGroup;
 			children = (
@@ -583,12 +638,13 @@
 			isa = PBXGroup;
 			children = (
 				796939B01D34C2390032220B /* AppDelegate.h */,
-				7933EB8A1D38E68F0072B64D /* Third */,
 				796939B11D34C2390032220B /* AppDelegate.m */,
 				796939B31D34C2390032220B /* ViewController.h */,
 				796939B41D34C2390032220B /* ViewController.m */,
 				796939B61D34C2390032220B /* Main.storyboard */,
 				79693A011D34DD780032220B /* NearByPrefixHeader.pch */,
+				7933EB8A1D38E68F0072B64D /* Third */,
+				792B4D521D3FA71300CD5F27 /* User */,
 				795317911D3A0905007DE05D /* Focus */,
 				796939E01D34C2CC0032220B /* NearBy */,
 				796939B91D34C2390032220B /* Assets.xcassets */,
@@ -694,6 +750,8 @@
 		79CF676A1D3C65F600B3D147 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				792B4D671D3FC01300CD5F27 /* carmear.png */,
+				792B4D651D3FBF3100CD5F27 /* house2.png */,
 				798DCF791D3E4DE30083EFAA /* placeHolder1.jpg */,
 				798DCF7B1D3E4FE60083EFAA /* placeHolder2.jpg */,
 				798DCF7D1D3E4FF00083EFAA /* placeHolder3.jpg */,
@@ -838,6 +896,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79693A061D34E4960032220B /* NearByTableViewCell.xib in Resources */,
+				792B4D661D3FBF3100CD5F27 /* house2.png in Resources */,
 				79CF67DA1D3D20B000B3D147 /* OriginalDetailHeaderView.xib in Resources */,
 				79CF67761D3C666600B3D147 /* button5.png in Resources */,
 				798DCF7E1D3E4FF00083EFAA /* placeHolder3.jpg in Resources */,
@@ -857,6 +916,7 @@
 				79CF67711D3C664C00B3D147 /* button1.png in Resources */,
 				799A4CA51D3BD30300096A1B /* FocusCollectionViewCell.xib in Resources */,
 				79CF67E51D3D26B200B3D147 /* restaurant.png in Resources */,
+				792B4D681D3FC01300CD5F27 /* carmear.png in Resources */,
 				795317A51D3A16D9007DE05D /* BannerTableViewCell.xib in Resources */,
 				79CF67741D3C664C00B3D147 /* button3.png in Resources */,
 				79D7B0C01D3783EB0094A70F /* ImpressionsTableViewCell.xib in Resources */,
@@ -947,16 +1007,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7925D3C81D407365009ECAE5 /* LoginViewController.m in Sources */,
 				7933EB971D38E68F0072B64D /* SCNavTabBarController.m in Sources */,
 				79D7B0D61D37D9B90094A70F /* TripsViewController.m in Sources */,
 				795317C61D3A651E007DE05D /* BannerWebViewController.m in Sources */,
 				791C413C1D36885200C1C672 /* Trip.m in Sources */,
 				795317A81D3A1EAB007DE05D /* FocusView.m in Sources */,
 				7933EB991D38E68F0072B64D /* SCPopView.m in Sources */,
+				792B4D601D3FA7D200CD5F27 /* SignUpViewController.m in Sources */,
 				7933EB871D38D9480072B64D /* NearByNavigationBar.m in Sources */,
 				796939B51D34C2390032220B /* ViewController.m in Sources */,
 				795317D21D3A7FDC007DE05D /* ButtonCollectionViewCell.m in Sources */,
 				796939F21D34CBB40032220B /* NearByViewController.m in Sources */,
+				792B4D641D3FA80E00CD5F27 /* UserViewController.m in Sources */,
 				791C41271D35E7C200C1C672 /* DeatinationDetailModel.m in Sources */,
 				795317C01D3A54AF007DE05D /* FocusFourTableViewCell.m in Sources */,
 				79CF67BF1D3CD13C00B3D147 /* FocusWebViewController.m in Sources */,
@@ -995,6 +1058,7 @@
 				79D7B0C31D37AA090094A70F /* Waypoint.m in Sources */,
 				7933EB841D3892FA0072B64D /* ReviewViewController.m in Sources */,
 				796939B21D34C2390032220B /* AppDelegate.m in Sources */,
+				792B4D6B1D3FC3CE00CD5F27 /* SetUserViewController.m in Sources */,
 				7953179A1D3A09E4007DE05D /* Focus.m in Sources */,
 				791C41351D3681AC00C1C672 /* TripsTableViewCell.m in Sources */,
 				79CF67C61D3CF8A800B3D147 /* TrackPointTableViewCell.m in Sources */,
