@@ -7,8 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import <TFHpple.h>
+#import <TFHppleElement.h>
+#import "NSObject+ArchiverUser.h"
+#import "Master.h"
 
 @interface AppDelegate ()
+
 
 @end
 
@@ -17,26 +22,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+
+    
     return YES;
 }
 
 
-
-#pragma mark --- 使用sessionid获取用户登录信息 ---
-
-- (void)getUserInfo{
-    
-    // 进行请求
-    NSString *urlString = @"http://web.breadtrip.com/";
-    [RequestManager requestManager:urlString finish:^(NSData *data) {
-        
-    } error:^(NSError *error) {
-        
-    }];
-    
-    
-    
-}
 
 
 

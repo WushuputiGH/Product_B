@@ -26,7 +26,20 @@
     
     [self.theImageView sd_setImageWithURL:[NSURL URLWithString:waypoint.photo]];
     // 获取图片的比例
+    [self configureTextWithWaypoint:waypoint];
     
+    
+}
+
+- (void)cellCoinfigureWithWaypointOutline: (Waypoint *)waypoint{
+    [self.theImageView sd_setImageWithURL:[NSURL URLWithString:waypoint.photo]];
+    self.theImageView.image = [UIImage imageWithData:waypoint.photoData];
+    // 获取图片的比例
+    [self configureTextWithWaypoint:waypoint];
+}
+
+
+- (void)configureTextWithWaypoint: (Waypoint *)waypoint{
     CGFloat aspect;
     if ( waypoint.photo_info[@"w"] == nil || [waypoint.photo_info[@"w"] floatValue] == 0) {
         aspect = 0;
@@ -45,6 +58,4 @@
     self.lat = waypoint.location[@"lat"];
     self.lng = waypoint.location[@"lng"];
 }
-
- 
 @end

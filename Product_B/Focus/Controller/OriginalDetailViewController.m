@@ -7,28 +7,48 @@
 //
 
 #import "OriginalDetailViewController.h"
-#import "OriginalDetailModel.h"
-#import "OriginalDetailHeaderView.h"
-#import "OriginalTableViewCell.h"
-#import "OriginalDetailItemTableViewCell.h"
-#import "OriginalTilteTableViewCell.h"
+
 
 @interface OriginalDetailViewController ()<UITableViewDataSource, UITableViewDelegate>
 
-@property (strong, nonatomic)UITableView *theTableView;
-@property (strong, nonatomic)OriginalDetailModel *originalDetailModel;
+
+
 
 @end
 
 @implementation OriginalDetailViewController
 
+
+- (OriginalDetailModel *)originalDetailModel{
+    if (!_originalDetailModel) {
+        _originalDetailModel = [[OriginalDetailModel alloc] init];
+    }
+    return _originalDetailModel;
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.originalDetailModel = [[OriginalDetailModel alloc] init];
     [self.view addSubview:self.theTableView];
     [self requestData];
 }
+
+
+#pragma mark ---视图显示的时候, 添加下载按钮---
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"download"] style:(UIBarButtonItemStylePlain) target:self action:@selector(save:)];
+
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    self.navigationItem.rightBarButtonItem = nil;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -36,21 +56,61 @@
 }
 
 
+#pragma mark --- save保存下载 -----
+- (void)save:(UIBarButtonItem *)button{
+    
+    [self alert];
+}
+
+
+- (void)alert{
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"是否下载" message:nil preferredStyle:(UIAlertControllerStyleAlert)];
+    
+    UIAlertAction *done = [UIAlertAction actionWithTitle:@"Done" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+        
+        // 如果是下载
+        // 首先开始下载任务
+        OriginalOutLine *originalOutline = [[OriginalOutLine alloc] init];
+        originalOutline.originalItem = self.originalItem;
+        originalOutline.originalDetailModel = self.originalDetailModel;
+        [originalOutline archiver];
+        
+        // 将self.downImage传递
+        NSString *key = [NSString stringWithFormat:@"OriginalOutline%@", self.originalItem.originalItemId];
+        [[OriginalOutLineId defaultOriginalOutlineIdArray] addDownloadOriginalOutLine:@{key: self.downImage}];
+        
+    }];
+    
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"cancel" style:(UIAlertActionStyleCancel) handler:^(UIAlertAction * _Nonnull action) {
+        
+        [alert dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
+    [alert addAction:done];
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:nil];
+    
+    
+}
+
 - (UITableView *)theTableView{
     if (!_theTableView) {
         _theTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:(UITableViewStyleGrouped)];
-        _theTableView.dataSource = self;
-        _theTableView.delegate = self;
-        
-        [_theTableView registerNib:[UINib nibWithNibName:@"OriginalTilteTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"originalTilteTableViewCell"];
-         [_theTableView registerNib:[UINib nibWithNibName:@"OriginalDetailItemTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"originalDetailItemTableViewCell"];
-        
-        _theTableView.estimatedRowHeight = 200;
-
+        [self configureTableView];
     }
     return _theTableView;
 }
 
+- (void)configureTableView{
+    _theTableView.dataSource = self;
+    _theTableView.delegate = self;
+    
+    [_theTableView registerNib:[UINib nibWithNibName:@"OriginalTilteTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"originalTilteTableViewCell"];
+    [_theTableView registerNib:[UINib nibWithNibName:@"OriginalDetailItemTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"originalDetailItemTableViewCell"];
+    
+    _theTableView.estimatedRowHeight = 200;
+}
 
 - (void)requestData{
     
@@ -89,13 +149,13 @@
     
     if (indexPath.section == 0) {
          OriginalTilteTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"originalTilteTableViewCell" forIndexPath:indexPath];
-        [cell cellCongifureWithOriginalDetailModel:self.originalDetailModel];
+        [self configureTitleCell:cell];
         return cell;
     }else{
         
         OriginalDetailItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"originalDetailItemTableViewCell" forIndexPath:indexPath];
         Waypoint *wayPoint = self.originalDetailModel.days[indexPath.section - 1].waypoints[indexPath.row];
-        [cell cellCoinfigureWithWaypoint:wayPoint];
+        [self configureDetailCell:cell wayPoint:wayPoint];
         return cell;
     }
 
@@ -107,7 +167,7 @@
     if (section == 0) {
         OriginalDetailHeaderView *header = [[[NSBundle mainBundle] loadNibNamed:@"OriginalDetailHeaderView" owner:nil options:nil] firstObject];
         header.frame = CGRectMake(0, 0, self.theTableView.frame.size.width, 348);
-        [header viewConfigureWithOriginalDetailModel:self.originalDetailModel];
+        [self configureTitleHeaderView:header];
         return header;
         
     }else{
@@ -124,6 +184,7 @@
     
 }
 
+
 - (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     
     if (section == 0) {
@@ -139,6 +200,19 @@
 }
 
 
+#pragma mark ---配置ui的方法---
+- (void)configureTitleHeaderView:(OriginalDetailHeaderView *)header{
+    [header viewConfigureWithOriginalDetailModel:self.originalDetailModel];
+}
+
+- (void)configureTitleCell:(OriginalTilteTableViewCell *)cell{
+    [cell cellCongifureWithOriginalDetailModel:self.originalDetailModel];
+}
+
+
+- (void)configureDetailCell:(OriginalDetailItemTableViewCell*)cell wayPoint:(Waypoint *)wayPoint{
+     [cell cellCoinfigureWithWaypoint:wayPoint];
+}
 
 /*
 #pragma mark - Navigation

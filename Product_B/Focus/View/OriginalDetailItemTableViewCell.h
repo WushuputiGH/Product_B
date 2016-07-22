@@ -25,6 +25,6 @@
 
 
 - (void)cellCoinfigureWithWaypoint: (Waypoint *)waypoint;
-
+- (void)cellCoinfigureWithWaypointOutline: (Waypoint *)waypoint;
 
 @end

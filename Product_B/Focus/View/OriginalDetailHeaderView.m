@@ -20,24 +20,41 @@
 
 
 - (void)viewConfigureWithOriginalDetailModel:(OriginalDetailModel *)model{
-    self.title.text = model.name;
-    self.name.text = model.theUser.name;
+   
+    [self configureTextWithOriginalDetailModel:model];
     
     [self.iconButton sd_setBackgroundImageWithURL:[NSURL URLWithString:model.theUser.avatar_m] forState:(UIControlStateNormal)];
     self.iconButton.layer.cornerRadius = 25;
     self.iconButton.clipsToBounds = YES;
-    
-    self.time.text = model.first_day.description;
-    self.daysCount.text = model.day_count.description;
-    self.miles.text = model.mileage.description;
-    self.liker.text = model.recommendations.description;
     
     [self.theImageView sd_setImageWithURL:[NSURL URLWithString:model.trackpoints_thumbnail_image]];
     self.theImageView.contentMode = UIViewContentModeScaleAspectFill;
     self.theImageView.clipsToBounds = YES;
 }
 
+- (void)viewConfigureWithOriginalDetailModelOutline: (OriginalDetailModel *)model{
+    [self configureTextWithOriginalDetailModel:model];
 
+    [self.iconButton setBackgroundImage:[UIImage imageWithData:model.theUser.avatar_m_Data] forState:(UIControlStateNormal)];
+    self.iconButton.layer.cornerRadius = 25;
+    self.iconButton.clipsToBounds = YES;
+    
+    self.theImageView.image = [UIImage imageWithData:model.trackpoints_thumbnail_image_Data];
+    
+    self.theImageView.contentMode = UIViewContentModeScaleAspectFill;
+    self.theImageView.clipsToBounds = YES;
+    
+}
+
+- (void)configureTextWithOriginalDetailModel:(OriginalDetailModel *)model{
+    self.title.text = model.name;
+    self.name.text = model.theUser.name;
+    self.time.text = model.first_day.description;
+    self.daysCount.text = model.day_count.description;
+    self.miles.text = model.mileage.description;
+    self.liker.text = model.recommendations.description;
+
+}
 
 
 

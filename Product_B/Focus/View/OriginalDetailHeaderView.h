@@ -20,5 +20,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *liker;
 
 - (void)viewConfigureWithOriginalDetailModel: (OriginalDetailModel *)model;
+- (void)viewConfigureWithOriginalDetailModelOutline: (OriginalDetailModel *)model;
+
 
 @end

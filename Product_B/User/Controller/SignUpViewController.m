@@ -9,6 +9,8 @@
 #import "SignUpViewController.h"
 #import "RequestManager.h"
 #import "SetUserViewController.h"
+#import <TFHpple.h>
+#import <TFHppleElement.h>
 #import <WebKit/WebKit.h>
 
 @interface SignUpViewController ()<UITextFieldDelegate>
@@ -36,7 +38,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     
 #pragma mark ---每次运行之前, 清除cookie, 清除上一次保存的记录----
     NSHTTPCookie *cookie;
@@ -106,15 +108,40 @@
                              };
     
     [RequestManager requestManager:urlString requestType:(RequestPOST) queryDictionary:parDic finish:^(NSData *data) {
+    
+        TFHpple *hpple = [[TFHpple alloc] initWithHTMLData:data];
+        // 获取节点
+        NSArray *dataArray = [hpple searchWithXPathQuery:@"//div"];
+        for (TFHppleElement *hppleElement in dataArray) {
+            if ([hppleElement.attributes[@"class"] isEqualToString:@"name"]) {
+                NSArray *childernArray = hppleElement.children; // <a href="/u/2384408471/">chenhong6</a>
+                for (TFHppleElement *childern in childernArray) {
+                    if ([childern.tagName isEqualToString:@"a"]) {
+                        // 获取id
+                        NSArray *stringArray = [childern.attributes[@"href"] componentsSeparatedByString:@"/"];
+                        NSString *theIdString = stringArray[2];
+                        // 获取childern的子节点的内容
+                        NSString *userName = childern.firstChild.content;
+
+                        // 获取设置界面
+                        SetUserViewController *setUserVC = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"setUser"];
+//                        [self presentViewController:setUserVC animated:YES completion:nil];
+                        [self.navigationController pushViewController:setUserVC animated:YES];
+                        return ;
+                    }
+                }
+            }
+        }
         
-        NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingMutableContainers) error:nil];
-        
-        NSString *htmlString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-   
-        NSLog(@"dfa");
-        // 获取设置界面
-        SetUserViewController *setUserVC = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"setUser"];
-        [self presentViewController:setUserVC animated:YES completion:nil];
+        NSArray *dataArray2 = [hpple searchWithXPathQuery:@"//span"];
+        for (TFHppleElement *hppleElement in dataArray2) {
+            if ([hppleElement.attributes[@"class"] isEqualToString:@"error"]){
+                if (hppleElement.text != nil) {
+                    self.chatChaCheck.text = [self.chatChaCheck.text stringByAppendingString:hppleElement.text];
+                }
+            }
+        }
+
  
     } error:^(NSError *error) {
         
@@ -149,6 +176,10 @@
 }
 
 
+- (IBAction)back:(UIBarButtonItem *)sender {
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 /*
 - (void)requestMessage_count{

@@ -11,19 +11,21 @@
 #import "Waypoint.h"
 #import "User.h"
 
-@interface Day : NSObject
+@interface Day : NSObject<NSCoding>
 @property (nonatomic, strong, readwrite) NSString *date;
 @property (nonatomic, strong, readwrite) NSNumber *day;
 @property (nonatomic, strong, readwrite) NSMutableArray <Waypoint *> *waypoints;
 
 @end
 
-@interface OriginalDetailModel : NSObject
+@interface OriginalDetailModel : NSObject<NSCoding>
 
 @property (nonatomic, strong, readwrite) NSString *name;
 @property (nonatomic, strong, readwrite) NSNumber *theId;
 @property (nonatomic, strong, readwrite) NSString *trackpoints_thumbnail_image;
+@property (nonatomic, strong, readwrite) NSData *trackpoints_thumbnail_image_Data;
 @property (nonatomic, strong, readwrite) NSString *cover_image;
+@property (nonatomic, strong, readwrite) NSData *cover_image_Data;
 
 
 @property (nonatomic, strong, readwrite) NSNumber *first_day;

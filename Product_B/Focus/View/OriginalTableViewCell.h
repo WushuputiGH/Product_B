@@ -17,6 +17,11 @@
 @property (strong, nonatomic) IBOutlet UILabel *recommendations;
 @property (strong, nonatomic) IBOutlet UILabel *total_comments_count;
 
+@property (strong, nonatomic) IBOutlet UIView *theContainerView;
+
+- (void)cellConfigureWithOriginalItemOutline:(OriginalItem *)originalItem;
+
+- (void)cellConfigureWithImage:(UIImage *)image;
 
 - (void)cellConfigureWithOriginalItem:(OriginalItem *)originalItem;
 

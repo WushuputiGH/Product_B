@@ -114,8 +114,28 @@
     OriginalItem *originalItem = self.originalItemList.originalItemList[indexPath.row];
     originalDetailVC.theOriginalItemId = originalItem.originalItemId;
     
+    originalDetailVC.originalItem = originalItem;
+    
+    // 将cell转成image传递给originalDetailVC
+    originalDetailVC.downImage = [self imageWithUIView:[tableView cellForRowAtIndexPath:indexPath]];
     [self.navigationController pushViewController:originalDetailVC animated:YES];
 }
+
+
+
+#pragma mark ---将view转成image----
+- (UIImage *)imageWithUIView:(UIView*)view
+{
+    UIGraphicsBeginImageContext(view.bounds.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [view.layer renderInContext:context];
+    UIImage* tImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return tImage;
+}
+
+
+
 
 
 - (void)didReceiveMemoryWarning {

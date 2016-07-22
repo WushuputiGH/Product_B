@@ -31,7 +31,7 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view alpha="0.65000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RdT-Dn-9HW">
+                    <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RdT-Dn-9HW">
                         <rect key="frame" x="8" y="203" width="565" height="20"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9U-zb-99c">
@@ -53,7 +53,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="6xl-6n-07P"/>
                             <constraint firstItem="KWh-1H-Viv" firstAttribute="leading" secondItem="d9U-zb-99c" secondAttribute="trailing" constant="8" symbolic="YES" id="8Du-iI-nwL"/>
@@ -91,6 +91,7 @@
             <connections>
                 <outlet property="name" destination="sXn-K9-jOc" id="5vQ-zl-8zE"/>
                 <outlet property="recommendations" destination="KWh-1H-Viv" id="hwu-OF-dZJ"/>
+                <outlet property="theContainerView" destination="RdT-Dn-9HW" id="Zov-8b-67k"/>
                 <outlet property="theImageview" destination="vHK-bs-yXO" id="dK1-7i-9YK"/>
                 <outlet property="timeAndWaypoints" destination="2Uj-ds-Dzi" id="Ea5-T6-ndj"/>
                 <outlet property="total_comments_count" destination="zox-0C-m7X" id="tid-q7-0FR"/>

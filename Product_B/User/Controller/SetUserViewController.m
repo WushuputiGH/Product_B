@@ -7,6 +7,7 @@
 //
 
 #import "SetUserViewController.h"
+#import "NSObject+ArchiverUser.h"
 
 @interface SetUserViewController ()<UIPickerViewDataSource, UIPickerViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (strong, nonatomic) IBOutlet UIButton *iconButton;
@@ -20,6 +21,11 @@
 
 @property (strong, nonatomic)UIImage *iconImage;
 @property (assign, nonatomic)NSInteger genderValue;
+
+
+// 定义一个NSInteger属性, 初始值时0, 当上传头像成功时候, 加1, 更改信息成功之后, 再加1, 只有当为2 的时候, 才表示成功
+@property (assign, nonatomic)NSInteger succeedTag;
+
 @end
 
 @implementation SetUserViewController
@@ -39,9 +45,41 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.genderValue = 1; // 默认为男
+    self.succeedTag = 0;
+    
+    // 添加检测successd的监测
+    [self addObserver:self forKeyPath:@"succeedTag" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+    
+    // 监听用户归档通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveUser) name:@"SaveUser" object:nil];
     
     
 }
+#pragma mark ---观察者---
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context{
+
+    if ([change[@"new"] isEqualToNumber:@2]) {
+        // 更改成功之后, 获取用户信息, 并归档
+        [NSObject getUserInfoAndArchiver];
+//        [self.navigationController popToRootViewControllerAnimated:YES];
+        
+        [self removeObserver:self forKeyPath:@"succeedTag" context:nil];
+        
+    }
+    
+}
+
+#pragma mark ---监听用户归档信息---
+- (void)saveUser{
+    // pop到最初界面
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    });
+    
+}
+
+
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 1;
@@ -145,6 +183,7 @@
 #pragma mark ---提交更改信息按钮-----
 - (IBAction)commitButton:(UIButton *)sender {
     
+    self.succeedTag = 0;
     // 获取生日
     NSDate *date = self.birthday.date;
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -157,8 +196,12 @@
     afManager.responseSerializer = [AFHTTPResponseSerializer serializer];
     [afManager POST:@"http://api.breadtrip.com/accounts/upload_avatar/" parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
-        NSData *imageData = UIImagePNGRepresentation(self.iconImage);
-        
+        NSData *imageData= nil;
+        if (self.iconImage == nil) {
+            imageData = UIImagePNGRepresentation([UIImage imageNamed:@"罗小黑"]);
+        }else{
+            imageData = UIImagePNGRepresentation(self.iconImage);
+        }
         [formData appendPartWithFileData:imageData name:@"avatar" fileName:@"avatar.jpg" mimeType:@"image/jpeg"];
         
     } progress:^(NSProgress * _Nonnull uploadProgress) {
@@ -169,14 +212,11 @@
         
         NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:responseObject options:(NSJSONReadingMutableContainers) error:nil];
         NSLog(@"");
+        self.succeedTag += 1;
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
-    
-    
-    
-    
     
     // 2.提交更改性别, 生日的请求
     NSString *urlString = @"http://web.breadtrip.com/accounts/settings/basic_info/";
@@ -192,6 +232,7 @@
         
         NSString *htmlString = [[NSString alloc] initWithData:data encoding:(NSUTF8StringEncoding)];
         NSLog(@"");
+         self.succeedTag += 1;
         
     } error:^(NSError *error) {
         

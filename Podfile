@@ -5,4 +5,5 @@ pod 'MJRefresh', '~> 3.1.0'
 pod 'AFNetworking', '~> 3.1.0'
 pod 'HCSStarRatingView', '~> 1.4.5'
 pod 'SDWebImage', '~> 3.7.6'
+pod 'hpple', '~> 0.2.0'
 end

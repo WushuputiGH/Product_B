@@ -9,9 +9,12 @@
 #import <Foundation/Foundation.h>
 
 
-@interface Waypoint : NSObject
+@interface Waypoint : NSObject <NSCoding>
 
 @property (nonatomic, strong, readwrite) NSString *photo;
+@property (nonatomic, strong, readwrite) NSData *photoData;
+
+
 @property (nonatomic, strong, readwrite) NSString *trip_id;
 @property (nonatomic, strong, readwrite) NSString *waypointId;
 @property (nonatomic, strong, readwrite) NSString *photo_s;

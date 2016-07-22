@@ -15,6 +15,7 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - HCSStarRatingView (1.4.5)
+  - hpple (0.2.0)
   - Masonry (1.0.0)
   - MJRefresh (3.1.0)
   - SDWebImage (3.7.6):
@@ -24,6 +25,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - HCSStarRatingView (~> 1.4.5)
+  - hpple (~> 0.2.0)
   - Masonry (~> 1.0.0)
   - MJRefresh (~> 3.1.0)
   - SDWebImage (~> 3.7.6)
@@ -31,10 +33,11 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   HCSStarRatingView: bff3f89314d3b5013ce826ea11897d3129ff6b8c
+  hpple: 3b765f96fc2cd56ad1a49aef6f7be5cb2aa64b57
   Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
   MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
 
-PODFILE CHECKSUM: c498572a787d7474b36e06d9f8f642246e3f7efb
+PODFILE CHECKSUM: 742e3808283d82829bc75dcc282190402ec47930
 
 COCOAPODS: 1.0.1
