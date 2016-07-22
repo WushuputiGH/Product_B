@@ -285,7 +285,6 @@
         <!--Set User View Controller-->
         <scene sceneID="xVr-9O-048">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BDS-oa-v1W" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="o9M-YN-x0f" customClass="SetUserViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="C2M-ut-Ph9"/>
@@ -328,6 +327,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BDS-oa-v1W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="21.5" y="2496.5"/>
         </scene>

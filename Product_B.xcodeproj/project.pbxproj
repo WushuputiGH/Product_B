@@ -11,6 +11,11 @@
 		7914F59A1D41E5C200D398FC /* OriginalDetailOutlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7914F5991D41E5C200D398FC /* OriginalDetailOutlineViewController.m */; };
 		7914F59C1D42009B00D398FC /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 7914F59B1D42009B00D398FC /* gear.png */; };
 		7914F5A21D4203FC00D398FC /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7914F5A11D4203FC00D398FC /* SetViewController.m */; };
+		7914F5AA1D42364D00D398FC /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 7914F5A31D42364D00D398FC /* back.png */; };
+		7914F5AB1D42364D00D398FC /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 7914F5A41D42364D00D398FC /* clock.png */; };
+		7914F5AC1D42364D00D398FC /* downarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7914F5A51D42364D00D398FC /* downarrow.png */; };
+		7914F5AE1D42364D00D398FC /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 7914F5A71D42364D00D398FC /* home.png */; };
+		7914F5B01D42364D00D398FC /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 7914F5A91D42364D00D398FC /* user.png */; };
 		791C411E1D35DA9700C1C672 /* DestinationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 791C411D1D35DA9700C1C672 /* DestinationViewController.m */; };
 		791C41211D35DC0C00C1C672 /* DeatinationHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 791C41201D35DC0C00C1C672 /* DeatinationHeaderView.m */; };
 		791C41271D35E7C200C1C672 /* DeatinationDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 791C41261D35E7C200C1C672 /* DeatinationDetailModel.m */; };
@@ -156,6 +161,11 @@
 		7914F59B1D42009B00D398FC /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
 		7914F5A01D4203FC00D398FC /* SetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetViewController.h; sourceTree = "<group>"; };
 		7914F5A11D4203FC00D398FC /* SetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetViewController.m; sourceTree = "<group>"; };
+		7914F5A31D42364D00D398FC /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		7914F5A41D42364D00D398FC /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
+		7914F5A51D42364D00D398FC /* downarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downarrow.png; sourceTree = "<group>"; };
+		7914F5A71D42364D00D398FC /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		7914F5A91D42364D00D398FC /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		791C411C1D35DA9700C1C672 /* DestinationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinationViewController.h; sourceTree = "<group>"; };
 		791C411D1D35DA9700C1C672 /* DestinationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinationViewController.m; sourceTree = "<group>"; };
 		791C411F1D35DC0C00C1C672 /* DeatinationHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeatinationHeaderView.h; sourceTree = "<group>"; };
@@ -796,6 +806,11 @@
 		79CF676A1D3C65F600B3D147 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				7914F5A31D42364D00D398FC /* back.png */,
+				7914F5A41D42364D00D398FC /* clock.png */,
+				7914F5A51D42364D00D398FC /* downarrow.png */,
+				7914F5A71D42364D00D398FC /* home.png */,
+				7914F5A91D42364D00D398FC /* user.png */,
 				7914F5961D41B97000D398FC /* 罗小黑.png */,
 				7914F59B1D42009B00D398FC /* gear.png */,
 				791C7B5B1D40D28B00929DC8 /* download2.png */,
@@ -961,6 +976,8 @@
 				79CF67E11D3D257D00B3D147 /* tree.png in Resources */,
 				7964E5DD1D3DBAFE00A9F8A4 /* OriginalDetailItemTableViewCell.xib in Resources */,
 				79CF67731D3C664C00B3D147 /* button2.png in Resources */,
+				7914F5AE1D42364D00D398FC /* home.png in Resources */,
+				7914F5AA1D42364D00D398FC /* back.png in Resources */,
 				79CF67E71D3D276100B3D147 /* shopping.png in Resources */,
 				79CF67721D3C664C00B3D147 /* button4.png in Resources */,
 				79CF67CC1D3CFC2200B3D147 /* OriginalTableViewCell.xib in Resources */,
@@ -969,6 +986,7 @@
 				79CF67E51D3D26B200B3D147 /* restaurant.png in Resources */,
 				791C7B5C1D40D28B00929DC8 /* download2.png in Resources */,
 				791C7B661D41012300929DC8 /* UserHeaderView.xib in Resources */,
+				7914F5AB1D42364D00D398FC /* clock.png in Resources */,
 				792B4D681D3FC01300CD5F27 /* carmear.png in Resources */,
 				7914F59C1D42009B00D398FC /* gear.png in Resources */,
 				795317A51D3A16D9007DE05D /* BannerTableViewCell.xib in Resources */,
@@ -978,6 +996,7 @@
 				796939BA1D34C2390032220B /* Assets.xcassets in Resources */,
 				791C41361D3681AC00C1C672 /* TripsTableViewCell.xib in Resources */,
 				795317AA1D3A1EC0007DE05D /* FocusView.xib in Resources */,
+				7914F5AC1D42364D00D398FC /* downarrow.png in Resources */,
 				796939E21D34C3100032220B /* NearyByStoryboard.storyboard in Resources */,
 				798DCF781D3E2AFC0083EFAA /* arrow.png in Resources */,
 				7933EB7E1D38890C0072B64D /* ReviewTableViewCell.xib in Resources */,
@@ -989,6 +1008,7 @@
 				7933EB891D38D9690072B64D /* NearByNavigationBar.xib in Resources */,
 				799A4C9D1D3BB8C500096A1B /* FocusTitleHeader.xib in Resources */,
 				79CF676C1D3C662800B3D147 /* button0.png in Resources */,
+				7914F5B01D42364D00D398FC /* user.png in Resources */,
 				7933EB961D38E68F0072B64D /* SCNavTabBar.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
