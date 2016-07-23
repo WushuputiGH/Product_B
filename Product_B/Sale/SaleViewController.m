@@ -24,7 +24,7 @@
 
 @end
 
-@implementation SaleViewController
+@implementation SaleViewController  
 
 
 - (void)reloadDate{
