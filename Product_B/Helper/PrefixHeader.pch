@@ -1,0 +1,56 @@
+//
+//  PrefixHeader.pch
+//  Product_B
+//
+//  Created by lanou on 16/7/19.
+//  Copyright © 2016年 YMN. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+// H.ziyang
+
+#import "NearByHeader.h"
+#import "NearByMacro.h"
+
+// 第三方
+#import <AFNetworking.h>
+#import <UIImageView+WebCache.h>
+#import <Masonry.h>
+#import <MWPhotoBrowser.h>
+#import <MWPhoto.h>
+
+
+// 工具类
+#import "CarouselView.h"
+#import "YRequestManager.h"
+#import "NSString+Html.h"
+#import "AutotHeight.h"
+#import "UserInfoManager.h"
+
+
+
+
+// frame
+#define KScreenWidth [UIScreen mainScreen].bounds.size.width
+#define KScreenHeight [UIScreen mainScreen].bounds.size.height
+#define KCOLOR(R,G,B) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1.0]
+
+// 各种接口
+#define KIntroMainURL @"http://m.springtour.com/home/apphome/index" // 首页轮播图
+#define KIntroMainCTURL @"http://api.breadtrip.com/v2/index/" // 首页collect / table
+#define KIntroStoryURL @"http://api.breadtrip.com/v2/new_trip/spot/hot/list/?start=0" // 故事跳转
+#define k @"http://api.breadtrip.com/trips/2387248990/waypoints/" // 专题 泰国页面
+
+
+//登录接口的地址
+#define KLoginUrl  @"http://api2.pianke.me/user/login"
+//注册接口的地址
+#define KRegistUrl @"http://api2.pianke.me/user/reg"
+
+
+#endif /* PrefixHeader_pch */
