@@ -30,6 +30,26 @@
 
 @implementation SetUserViewController
 
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.hidesBottomBarWhenPushed = YES;
+    }
+    return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.hidesBottomBarWhenPushed = YES;
+    }
+    return self;
+}
+
+
 - (UIImagePickerController *)imagePicker{
     
     if (!_imagePicker) {

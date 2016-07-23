@@ -23,8 +23,7 @@
 @property (nonatomic, strong, readwrite)UITableView *theTableView;
 @property (nonatomic, assign) CGFloat screenHeight;
 @property (nonatomic, assign) CGFloat screenWidth;
-
-
+@property (nonatomic, strong) UIView *headerTitleView;
 
 @end
 
@@ -57,6 +56,23 @@
 }
 
 
+- (UIView *)headerTitleView{
+    
+    if (!_headerTitleView) {
+        _headerTitleView = [[UIView alloc] initWithFrame:CGRectMake(0, -20, [UIScreen mainScreen].bounds.size.width, 64)];
+        _headerTitleView.backgroundColor = [UIColor colorWithRed:54.0 / 255 green:191.0/255 blue:196.0 / 255 alpha:1];
+
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width / 2 - 100, 20, 200, 44)];
+        label.textAlignment = NSTextAlignmentCenter;
+        label.text = @"精彩推荐";
+        label.font = [UIFont systemFontOfSize:17 weight:1.5];
+        label.textColor = [UIColor whiteColor];
+        [_headerTitleView addSubview:label];
+    }
+    return _headerTitleView;
+
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -65,12 +81,23 @@
     [self.view addSubview:self.theTableView];
     [self requsetData];
     
+    [self.navigationController.navigationBar addSubview:self.headerTitleView];
+    
     // 监听focusView被点击的通知
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(focusViewTap:) name:@"FOCUSVIEWTAP" object:nil];
     
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.headerTitleView.hidden = NO;
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    self.headerTitleView.hidden = YES;
+}
 
 #pragma mark ---数据请求---
 
@@ -231,13 +258,9 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    self.tabBarController.tabBar.hidden = NO;
+//    self.tabBarController.tabBar.hidden = NO;
 }
 
-- (void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    self.tabBarController.tabBar.hidden = YES;
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -33,6 +33,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
+    
     // Do any additional setup after loading the view.
     self.shareDeatinationDetailModel = [DeatinationDetailModel shareModel];
     // 使用runtime, 首先将nearItem的值赋值给shareDeatinationDetailModel

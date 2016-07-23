@@ -56,7 +56,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.94844728708267212" green="0.98441606760025024" blue="0.98465138673782349" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.27964729070663452" green="0.87931656837463379" blue="0.91589158773422241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="X22-IW-Ijv" firstAttribute="leading" secondItem="YHd-nl-jMe" secondAttribute="leading" id="6tW-FI-Bwe"/>
                             <constraint firstAttribute="trailing" secondItem="X22-IW-Ijv" secondAttribute="trailing" constant="8" id="84N-uc-xxk"/>
@@ -83,6 +83,7 @@
                     <constraint firstItem="jBb-M6-obC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="fTI-5Y-j0Z"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="backView" destination="jBb-M6-obC" id="13g-wz-Dtm"/>
                 <outlet property="nameLabel" destination="soV-cj-7zs" id="nBM-nh-v4i"/>

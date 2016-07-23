@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -48,8 +48,8 @@
         <!--发现-->
         <scene sceneID="R6Y-Ke-hAB">
             <objects>
-                <navigationController id="c4R-qJ-a2Z" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="发现" id="giJ-BR-MYZ"/>
+                <navigationController hidesBottomBarWhenPushed="YES" id="c4R-qJ-a2Z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="发现" image="windmill.png" id="giJ-BR-MYZ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="LyO-lS-Yh6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -65,8 +65,8 @@
         <!--我的-->
         <scene sceneID="pbr-Tl-2k1">
             <objects>
-                <navigationController id="d81-Nt-WyD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的" id="zIb-ud-OyA"/>
+                <navigationController hidesBottomBarWhenPushed="YES" id="d81-Nt-WyD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的" image="cat.png" id="zIb-ud-OyA"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="h9H-LZ-6cu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -201,14 +201,17 @@
         <!--Tab Bar Controller-->
         <scene sceneID="IMN-72-7Xa">
             <objects>
-                <tabBarController id="8iG-KZ-pnN" sceneMemberID="viewController">
+                <tabBarController hidesBottomBarWhenPushed="YES" id="8iG-KZ-pnN" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="wIY-PB-CRn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" red="0.21128310419999999" green="0.74763297240000004" blue="0.76670343139999997" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
+                        <segue destination="wpk-A9-3SK" kind="relationship" relationship="viewControllers" id="lvc-LR-5ax"/>
                         <segue destination="EoY-9V-zcP" kind="relationship" relationship="viewControllers" id="RVP-0Y-Npa"/>
                         <segue destination="c4R-qJ-a2Z" kind="relationship" relationship="viewControllers" id="40O-rG-Fzk"/>
                         <segue destination="d81-Nt-WyD" kind="relationship" relationship="viewControllers" id="u65-x3-5lI"/>
@@ -218,12 +221,50 @@
             </objects>
             <point key="canvasLocation" x="-522.5" y="713.5"/>
         </scene>
+        <!--旅行-->
+        <scene sceneID="cpx-KV-B2M">
+            <objects>
+                <navigationController hidesBottomBarWhenPushed="YES" id="wpk-A9-3SK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="旅行" image="backpack2.png" id="9Cd-UU-syy"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yRd-8U-u2A">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wUm-uK-UIO" kind="relationship" relationship="rootViewController" id="9eo-rl-Iyz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9su-t8-rLI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="67.5" y="-463.5"/>
+        </scene>
+        <!--Introduce Main View Controller-->
+        <scene sceneID="0vZ-SV-P8x">
+            <objects>
+                <viewController id="wUm-uK-UIO" customClass="IntroduceMainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UZE-Ng-gar"/>
+                        <viewControllerLayoutGuide type="bottom" id="gxf-VH-O9z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ewk-cr-Jaz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Eb-FN-vg6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6qB-iz-PQO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="509.5" y="-463.5"/>
+        </scene>
         <!--附近-->
         <scene sceneID="XFP-8E-kdM">
             <objects>
-                <navigationController id="EoY-9V-zcP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="附近" id="1ka-bK-fyf"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="KhO-fF-Qkl">
+                <navigationController hidesBottomBarWhenPushed="YES" id="EoY-9V-zcP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="附近" image="nearBy.png" id="1ka-bK-fyf">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KhO-fF-Qkl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -727,9 +768,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backpack2.png" width="30" height="30"/>
         <image name="carmear.png" width="130" height="127"/>
+        <image name="cat.png" width="31" height="33"/>
+        <image name="nearBy.png" width="27" height="32"/>
+        <image name="windmill.png" width="24" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9I7-iy-Qqw"/>
+        <segue reference="UXO-nd-hiS"/>
     </inferredMetricsTieBreakers>
 </document>

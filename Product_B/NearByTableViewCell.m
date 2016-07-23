@@ -26,7 +26,8 @@
     [self.theStartView addSubview:self.starRatingView];
     
     
-    self.backView.layer.cornerRadius = 5;
+    self.backView.layer.cornerRadius = 20;
+    self.theImageView.layer.cornerRadius = 20;
 
     
 }

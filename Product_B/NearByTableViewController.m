@@ -77,7 +77,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
+   
     
     // 首先需要添加tabelView
     [self.view addSubview:self.nearByTableView];
@@ -107,6 +107,8 @@
      */
     [self.locationManager requestLocation];
     
+    
+    self.nearByTableView.backgroundColor = [UIColor colorWithRed:250.0 / 255 green:102.0 / 255 blue:102.0 / 255 alpha:1];
 }
 
 
@@ -251,6 +253,8 @@
 //    destinationVC.theId = nearByItem.nearByItemId;
     destinationVC.nearByItem = nearByItem;
     
+    destinationVC.hidesBottomBarWhenPushed = YES;
+    
 //    UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:destinationVC];
 //    [self presentViewController:navigation animated:YES completion:nil];
     [self.navigationController pushViewController:destinationVC animated:YES];
@@ -260,12 +264,12 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-     self.tabBarController.tabBar.hidden = NO;
+//     self.tabBarController.tabBar.hidden = NO;
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-     self.tabBarController.tabBar.hidden = YES;
+//     self.tabBarController.tabBar.hidden = YES;
 }
 
 #pragma mark ---执行定位的代理方法-----
