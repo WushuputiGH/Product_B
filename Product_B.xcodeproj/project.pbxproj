@@ -136,6 +136,14 @@
 		799A4CA01D3BBC4C00096A1B /* FocusTitleHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 799A4C9F1D3BBC4C00096A1B /* FocusTitleHeader.m */; };
 		799A4CA41D3BD30300096A1B /* FocusCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 799A4CA21D3BD30300096A1B /* FocusCollectionViewCell.m */; };
 		799A4CA51D3BD30300096A1B /* FocusCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 799A4CA31D3BD30300096A1B /* FocusCollectionViewCell.xib */; };
+		79B73E4E1D43212600C7C766 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B73E451D43212600C7C766 /* DetailViewController.m */; };
+		79B73E4F1D43212600C7C766 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B73E471D43212600C7C766 /* MyTableViewCell.m */; };
+		79B73E501D43212600C7C766 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79B73E481D43212600C7C766 /* MyTableViewCell.xib */; };
+		79B73E511D43212600C7C766 /* Preduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B73E4A1D43212600C7C766 /* Preduct.m */; };
+		79B73E521D43212600C7C766 /* SaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B73E4D1D43212600C7C766 /* SaleViewController.m */; };
+		79B73E561D43344E00C7C766 /* produce@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79B73E551D43344E00C7C766 /* produce@3x.png */; };
+		79B73E591D4334D600C7C766 /* produce.png in Resources */ = {isa = PBXBuildFile; fileRef = 79B73E571D4334D600C7C766 /* produce.png */; };
+		79B73E5A1D4334D600C7C766 /* produce@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79B73E581D4334D600C7C766 /* produce@2x.png */; };
 		79CF676C1D3C662800B3D147 /* button0.png in Resources */ = {isa = PBXBuildFile; fileRef = 79CF676B1D3C662800B3D147 /* button0.png */; };
 		79CF67711D3C664C00B3D147 /* button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 79CF676D1D3C664C00B3D147 /* button1.png */; };
 		79CF67721D3C664C00B3D147 /* button4.png in Resources */ = {isa = PBXBuildFile; fileRef = 79CF676E1D3C664C00B3D147 /* button4.png */; };
@@ -409,6 +417,18 @@
 		799A4CA11D3BD30300096A1B /* FocusCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FocusCollectionViewCell.h; sourceTree = "<group>"; };
 		799A4CA21D3BD30300096A1B /* FocusCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FocusCollectionViewCell.m; sourceTree = "<group>"; };
 		799A4CA31D3BD30300096A1B /* FocusCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FocusCollectionViewCell.xib; sourceTree = "<group>"; };
+		79B73E441D43212600C7C766 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		79B73E451D43212600C7C766 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		79B73E461D43212600C7C766 /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
+		79B73E471D43212600C7C766 /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
+		79B73E481D43212600C7C766 /* MyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
+		79B73E491D43212600C7C766 /* Preduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preduct.h; sourceTree = "<group>"; };
+		79B73E4A1D43212600C7C766 /* Preduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Preduct.m; sourceTree = "<group>"; };
+		79B73E4C1D43212600C7C766 /* SaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaleViewController.h; sourceTree = "<group>"; };
+		79B73E4D1D43212600C7C766 /* SaleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaleViewController.m; sourceTree = "<group>"; };
+		79B73E551D43344E00C7C766 /* produce@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "produce@3x.png"; sourceTree = "<group>"; };
+		79B73E571D4334D600C7C766 /* produce.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = produce.png; sourceTree = "<group>"; };
+		79B73E581D4334D600C7C766 /* produce@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "produce@2x.png"; sourceTree = "<group>"; };
 		79CF676B1D3C662800B3D147 /* button0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button0.png; sourceTree = "<group>"; };
 		79CF676D1D3C664C00B3D147 /* button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button1.png; sourceTree = "<group>"; };
 		79CF676E1D3C664C00B3D147 /* button4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button4.png; sourceTree = "<group>"; };
@@ -872,6 +892,7 @@
 				796939B41D34C2390032220B /* ViewController.m */,
 				796939B61D34C2390032220B /* Main.storyboard */,
 				79693A011D34DD780032220B /* NearByPrefixHeader.pch */,
+				79B73E431D43212600C7C766 /* Sale */,
 				7914F6001D42483D00D398FC /* Introduce */,
 				7933EB8A1D38E68F0072B64D /* Third */,
 				792B4D521D3FA71300CD5F27 /* User */,
@@ -992,9 +1013,28 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		79B73E431D43212600C7C766 /* Sale */ = {
+			isa = PBXGroup;
+			children = (
+				79B73E441D43212600C7C766 /* DetailViewController.h */,
+				79B73E451D43212600C7C766 /* DetailViewController.m */,
+				79B73E461D43212600C7C766 /* MyTableViewCell.h */,
+				79B73E471D43212600C7C766 /* MyTableViewCell.m */,
+				79B73E481D43212600C7C766 /* MyTableViewCell.xib */,
+				79B73E491D43212600C7C766 /* Preduct.h */,
+				79B73E4A1D43212600C7C766 /* Preduct.m */,
+				79B73E4C1D43212600C7C766 /* SaleViewController.h */,
+				79B73E4D1D43212600C7C766 /* SaleViewController.m */,
+			);
+			path = Sale;
+			sourceTree = "<group>";
+		};
 		79CF676A1D3C65F600B3D147 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				79B73E571D4334D600C7C766 /* produce.png */,
+				79B73E581D4334D600C7C766 /* produce@2x.png */,
+				79B73E551D43344E00C7C766 /* produce@3x.png */,
 				7914F65B1D42591100D398FC /* windmill.png */,
 				7914F65C1D42591100D398FC /* windmill@2x.png */,
 				7914F6591D42584700D398FC /* windmill@3x.png */,
@@ -1188,6 +1228,7 @@
 				7918BA981D42F7D100C16D06 /* NearByHeaderTitleView.xib in Resources */,
 				79CF67CC1D3CFC2200B3D147 /* OriginalTableViewCell.xib in Resources */,
 				79CF67711D3C664C00B3D147 /* button1.png in Resources */,
+				79B73E591D4334D600C7C766 /* produce.png in Resources */,
 				7914F65D1D42591100D398FC /* windmill.png in Resources */,
 				799A4CA51D3BD30300096A1B /* FocusCollectionViewCell.xib in Resources */,
 				79CF67E51D3D26B200B3D147 /* restaurant.png in Resources */,
@@ -1197,6 +1238,7 @@
 				7914F6621D42599000D398FC /* cat@2x.png in Resources */,
 				7914F5AB1D42364D00D398FC /* clock.png in Resources */,
 				792B4D681D3FC01300CD5F27 /* carmear.png in Resources */,
+				79B73E561D43344E00C7C766 /* produce@3x.png in Resources */,
 				7914F59C1D42009B00D398FC /* gear@3x.png in Resources */,
 				7914F63A1D424CC500D398FC /* greece_windmill_96px_1140291_easyicon.net.png in Resources */,
 				795317A51D3A16D9007DE05D /* BannerTableViewCell.xib in Resources */,
@@ -1208,6 +1250,7 @@
 				796939BA1D34C2390032220B /* Assets.xcassets in Resources */,
 				791C41361D3681AC00C1C672 /* TripsTableViewCell.xib in Resources */,
 				795317AA1D3A1EC0007DE05D /* FocusView.xib in Resources */,
+				79B73E5A1D4334D600C7C766 /* produce@2x.png in Resources */,
 				7914F5AC1D42364D00D398FC /* downarrow.png in Resources */,
 				7914F6581D42577800D398FC /* cat@3x.png in Resources */,
 				796939E21D34C3100032220B /* NearyByStoryboard.storyboard in Resources */,
@@ -1221,6 +1264,7 @@
 				7933EB891D38D9690072B64D /* NearByNavigationBar.xib in Resources */,
 				7914F6561D42574800D398FC /* backpack2@3x.png in Resources */,
 				799A4C9D1D3BB8C500096A1B /* FocusTitleHeader.xib in Resources */,
+				79B73E501D43212600C7C766 /* MyTableViewCell.xib in Resources */,
 				79CF676C1D3C662800B3D147 /* button0.png in Resources */,
 				7914F5B01D42364D00D398FC /* user.png in Resources */,
 				7933EB961D38E68F0072B64D /* SCNavTabBar.bundle in Resources */,
@@ -1314,6 +1358,7 @@
 				795317C01D3A54AF007DE05D /* FocusFourTableViewCell.m in Sources */,
 				7914F5A21D4203FC00D398FC /* SetViewController.m in Sources */,
 				7914F62D1D42483D00D398FC /* IntroStoryCollectModel.m in Sources */,
+				79B73E521D43212600C7C766 /* SaleViewController.m in Sources */,
 				79CF67BF1D3CD13C00B3D147 /* FocusWebViewController.m in Sources */,
 				7918BA961D42F7BD00C16D06 /* NearByHeaderTitleView.m in Sources */,
 				791C413F1D368A0200C1C672 /* User.m in Sources */,
@@ -1332,6 +1377,7 @@
 				79D7B0BF1D3783EB0094A70F /* ImpressionsTableViewCell.m in Sources */,
 				79D7B0BB1D37634B0094A70F /* Spot.m in Sources */,
 				795317BD1D3A52DE007DE05D /* FocusThreeTableViewCell.m in Sources */,
+				79B73E4E1D43212600C7C766 /* DetailViewController.m in Sources */,
 				7933EB791D38850A0072B64D /* ReviewListModel.m in Sources */,
 				7933EB981D38E68F0072B64D /* SCNavTabBar.m in Sources */,
 				795317A01D3A1243007DE05D /* FocusContainerViewController.m in Sources */,
@@ -1360,6 +1406,7 @@
 				79CF67D21D3D01CE00B3D147 /* OriginalItemList.m in Sources */,
 				79693A051D34E4960032220B /* NearByTableViewCell.m in Sources */,
 				7914F6251D42483D00D398FC /* IntroduceMainViewController.m in Sources */,
+				79B73E4F1D43212600C7C766 /* MyTableViewCell.m in Sources */,
 				7953179D1D3A106E007DE05D /* FocusListModel.m in Sources */,
 				79D7B0C31D37AA090094A70F /* Waypoint.m in Sources */,
 				7914F6241D42483D00D398FC /* IntroCollectViewController.m in Sources */,
@@ -1392,6 +1439,7 @@
 				79CF67D81D3D209600B3D147 /* OriginalDetailHeaderView.m in Sources */,
 				7914F6331D42483D00D398FC /* YIntroTableViewCell.m in Sources */,
 				796939AF1D34C2390032220B /* main.m in Sources */,
+				79B73E511D43212600C7C766 /* Preduct.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

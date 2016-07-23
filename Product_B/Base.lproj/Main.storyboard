@@ -23,7 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="531.5" y="261.5"/>
+            <point key="canvasLocation" x="509.5" y="261.5"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="X7V-hx-jHP">
@@ -212,8 +212,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="wpk-A9-3SK" kind="relationship" relationship="viewControllers" id="lvc-LR-5ax"/>
-                        <segue destination="EoY-9V-zcP" kind="relationship" relationship="viewControllers" id="RVP-0Y-Npa"/>
+                        <segue destination="RDn-Z4-gJc" kind="relationship" relationship="viewControllers" id="mvE-7R-71R"/>
                         <segue destination="c4R-qJ-a2Z" kind="relationship" relationship="viewControllers" id="40O-rG-Fzk"/>
+                        <segue destination="EoY-9V-zcP" kind="relationship" relationship="viewControllers" id="RVP-0Y-Npa"/>
                         <segue destination="d81-Nt-WyD" kind="relationship" relationship="viewControllers" id="u65-x3-5lI"/>
                     </connections>
                 </tabBarController>
@@ -237,6 +238,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9su-t8-rLI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="67.5" y="-463.5"/>
+        </scene>
+        <!--良品-->
+        <scene sceneID="ar9-hv-k9M">
+            <objects>
+                <navigationController id="RDn-Z4-gJc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="良品" image="produce.png" id="IRx-AH-RWX"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Qw-JC-FyY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="j69-vb-qdx" kind="relationship" relationship="rootViewController" id="aS6-fn-Ug3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wfi-0v-BFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="67.5" y="-1186.5"/>
+        </scene>
+        <!--Sale View Controller-->
+        <scene sceneID="UqJ-rP-rg9">
+            <objects>
+                <viewController id="j69-vb-qdx" customClass="SaleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7RA-Yh-Mfp"/>
+                        <viewControllerLayoutGuide type="bottom" id="WkL-YT-1aV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wua-ps-rJR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="k6f-GE-Ai2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h7O-Qb-aeE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="509.5" y="-1186.5"/>
         </scene>
         <!--Introduce Main View Controller-->
         <scene sceneID="0vZ-SV-P8x">
@@ -772,6 +809,7 @@
         <image name="carmear.png" width="130" height="127"/>
         <image name="cat.png" width="31" height="33"/>
         <image name="nearBy.png" width="27" height="32"/>
+        <image name="produce.png" width="34" height="30"/>
         <image name="windmill.png" width="24" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
