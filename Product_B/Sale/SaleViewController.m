@@ -28,8 +28,7 @@
 
 
 - (void)reloadDate{
-    
-    NSLog(@"刷新");
+ 
     [self reloadgateagain];
     NSString *string = [NSString stringWithFormat:@"http://api.breadtrip.com/hunter/products/more/?city_name=%@&start=0",self.c_city];
     
