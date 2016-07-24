@@ -144,6 +144,11 @@
 		79B73E561D43344E00C7C766 /* produce@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79B73E551D43344E00C7C766 /* produce@3x.png */; };
 		79B73E591D4334D600C7C766 /* produce.png in Resources */ = {isa = PBXBuildFile; fileRef = 79B73E571D4334D600C7C766 /* produce.png */; };
 		79B73E5A1D4334D600C7C766 /* produce@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79B73E581D4334D600C7C766 /* produce@2x.png */; };
+		79B73E5D1D4393DD00C7C766 /* FocusMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B73E5C1D4393DD00C7C766 /* FocusMoreViewController.m */; };
+		79B73E661D4398BD00C7C766 /* FocusMoreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79B73E641D4398BD00C7C766 /* FocusMoreCollectionViewCell.xib */; };
+		79B73E671D4398BD00C7C766 /* FocusMoreCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B73E651D4398BD00C7C766 /* FocusMoreCollectionViewCell.m */; };
+		79B73E691D43B3D600C7C766 /* one.html in Resources */ = {isa = PBXBuildFile; fileRef = 79B73E681D43B3D600C7C766 /* one.html */; };
+		79B73E6A1D43BD3400C7C766 /* FocusWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CF67BE1D3CD13C00B3D147 /* FocusWebViewController.m */; };
 		79CF676C1D3C662800B3D147 /* button0.png in Resources */ = {isa = PBXBuildFile; fileRef = 79CF676B1D3C662800B3D147 /* button0.png */; };
 		79CF67711D3C664C00B3D147 /* button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 79CF676D1D3C664C00B3D147 /* button1.png */; };
 		79CF67721D3C664C00B3D147 /* button4.png in Resources */ = {isa = PBXBuildFile; fileRef = 79CF676E1D3C664C00B3D147 /* button4.png */; };
@@ -429,6 +434,12 @@
 		79B73E551D43344E00C7C766 /* produce@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "produce@3x.png"; sourceTree = "<group>"; };
 		79B73E571D4334D600C7C766 /* produce.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = produce.png; sourceTree = "<group>"; };
 		79B73E581D4334D600C7C766 /* produce@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "produce@2x.png"; sourceTree = "<group>"; };
+		79B73E5B1D4393DD00C7C766 /* FocusMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FocusMoreViewController.h; sourceTree = "<group>"; };
+		79B73E5C1D4393DD00C7C766 /* FocusMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FocusMoreViewController.m; sourceTree = "<group>"; };
+		79B73E631D4398BD00C7C766 /* FocusMoreCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FocusMoreCollectionViewCell.h; sourceTree = "<group>"; };
+		79B73E641D4398BD00C7C766 /* FocusMoreCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FocusMoreCollectionViewCell.xib; sourceTree = "<group>"; };
+		79B73E651D4398BD00C7C766 /* FocusMoreCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FocusMoreCollectionViewCell.m; sourceTree = "<group>"; };
+		79B73E681D43B3D600C7C766 /* one.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = one.html; sourceTree = "<group>"; };
 		79CF676B1D3C662800B3D147 /* button0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button0.png; sourceTree = "<group>"; };
 		79CF676D1D3C664C00B3D147 /* button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button1.png; sourceTree = "<group>"; };
 		79CF676E1D3C664C00B3D147 /* button4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button4.png; sourceTree = "<group>"; };
@@ -777,6 +788,8 @@
 			children = (
 				7953179E1D3A1243007DE05D /* FocusContainerViewController.h */,
 				7953179F1D3A1243007DE05D /* FocusContainerViewController.m */,
+				79B73E5B1D4393DD00C7C766 /* FocusMoreViewController.h */,
+				79B73E5C1D4393DD00C7C766 /* FocusMoreViewController.m */,
 				795317C41D3A651E007DE05D /* BannerWebViewController.h */,
 				795317C51D3A651E007DE05D /* BannerWebViewController.m */,
 				799A4C961D3B8BB600096A1B /* FocusPlaceDetaliViewController.h */,
@@ -794,6 +807,7 @@
 		795317931D3A0905007DE05D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				79B73E681D43B3D600C7C766 /* one.html */,
 				7953179B1D3A106E007DE05D /* FocusListModel.h */,
 				7953179C1D3A106E007DE05D /* FocusListModel.m */,
 				799A4C8D1D3B714300096A1B /* FocusViewModel.h */,
@@ -857,6 +871,9 @@
 				7964E5D91D3DBAFE00A9F8A4 /* OriginalDetailItemTableViewCell.h */,
 				7964E5DA1D3DBAFE00A9F8A4 /* OriginalDetailItemTableViewCell.m */,
 				7964E5DB1D3DBAFE00A9F8A4 /* OriginalDetailItemTableViewCell.xib */,
+				79B73E631D4398BD00C7C766 /* FocusMoreCollectionViewCell.h */,
+				79B73E651D4398BD00C7C766 /* FocusMoreCollectionViewCell.m */,
+				79B73E641D4398BD00C7C766 /* FocusMoreCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1250,6 +1267,7 @@
 				796939BA1D34C2390032220B /* Assets.xcassets in Resources */,
 				791C41361D3681AC00C1C672 /* TripsTableViewCell.xib in Resources */,
 				795317AA1D3A1EC0007DE05D /* FocusView.xib in Resources */,
+				79B73E691D43B3D600C7C766 /* one.html in Resources */,
 				79B73E5A1D4334D600C7C766 /* produce@2x.png in Resources */,
 				7914F5AC1D42364D00D398FC /* downarrow.png in Resources */,
 				7914F6581D42577800D398FC /* cat@3x.png in Resources */,
@@ -1258,6 +1276,7 @@
 				7933EB7E1D38890C0072B64D /* ReviewTableViewCell.xib in Resources */,
 				798DCF7A1D3E4DE30083EFAA /* placeHolder1.jpg in Resources */,
 				7914F6681D425C9000D398FC /* download@3x.png in Resources */,
+				79B73E661D4398BD00C7C766 /* FocusMoreCollectionViewCell.xib in Resources */,
 				791C41311D363A6900C1C672 /* ImpressionsHeaderView.xib in Resources */,
 				79CF67DF1D3D23DF00B3D147 /* OriginalTilteTableViewCell.xib in Resources */,
 				796939B81D34C2390032220B /* Main.storyboard in Resources */,
@@ -1415,6 +1434,8 @@
 				7933EB841D3892FA0072B64D /* ReviewViewController.m in Sources */,
 				796939B21D34C2390032220B /* AppDelegate.m in Sources */,
 				792B4D6B1D3FC3CE00CD5F27 /* SetUserViewController.m in Sources */,
+				79B73E671D4398BD00C7C766 /* FocusMoreCollectionViewCell.m in Sources */,
+				79B73E5D1D4393DD00C7C766 /* FocusMoreViewController.m in Sources */,
 				7953179A1D3A09E4007DE05D /* Focus.m in Sources */,
 				791C41351D3681AC00C1C672 /* TripsTableViewCell.m in Sources */,
 				7914F5F61D4247FE00D398FC /* YRequestManager.m in Sources */,
@@ -1447,6 +1468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79B73E6A1D43BD3400C7C766 /* FocusWebViewController.m in Sources */,
 				796939C81D34C2390032220B /* Product_BTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

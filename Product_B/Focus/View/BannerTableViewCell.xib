@@ -25,6 +25,7 @@
                     <constraint firstAttribute="bottom" secondItem="sii-pN-Zzl" secondAttribute="bottom" constant="10" id="vRr-XZ-Ay2"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.27964729070663452" green="0.87931656837463379" blue="0.91589158773422241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="theImageView" destination="sii-pN-Zzl" id="Xt1-SL-jF6"/>
             </connections>

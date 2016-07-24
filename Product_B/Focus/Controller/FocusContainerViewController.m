@@ -16,9 +16,10 @@
 #import "FocusFiveTableViewCell.h"
 #import "BannerWebViewController.h"
 #import "FocusPlaceDetaliViewController.h"
+#import "FocusMoreViewController.h"
 #import <WebKit/WebKit.h>
 
-@interface FocusContainerViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface FocusContainerViewController () <UITableViewDataSource, UITableViewDelegate, FocusFiveTableViewCellMoreButton>
 @property (nonatomic, strong, readwrite)FocusListModel *focusListModel;
 @property (nonatomic, strong, readwrite)UITableView *theTableView;
 @property (nonatomic, assign) CGFloat screenHeight;
@@ -32,7 +33,7 @@
 
 - (UITableView *)theTableView{
     if (!_theTableView) {
-        _theTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, _screenWidth, _screenHeight) style:(UITableViewStylePlain)];
+        _theTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, _screenWidth, _screenHeight - 64) style:(UITableViewStylePlain)];
         _theTableView.dataSource = self;
         _theTableView.delegate = self;
         
@@ -42,7 +43,8 @@
         [_theTableView registerClass:[FocusThreeTableViewCell class] forCellReuseIdentifier:@"focusThreeTableViewCell"];
         [_theTableView registerClass:[FocusFourTableViewCell class] forCellReuseIdentifier:@"focusFourTableViewCell"];
         [_theTableView registerClass:[FocusFiveTableViewCell class] forCellReuseIdentifier:@"focusFiveTableViewCell"];
-
+        _theTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _theTableView.backgroundColor = KLightGreen;
         
     }
     return _theTableView;
@@ -60,8 +62,7 @@
     
     if (!_headerTitleView) {
         _headerTitleView = [[UIView alloc] initWithFrame:CGRectMake(0, -20, [UIScreen mainScreen].bounds.size.width, 64)];
-        _headerTitleView.backgroundColor = [UIColor colorWithRed:54.0 / 255 green:191.0/255 blue:196.0 / 255 alpha:1];
-
+        _headerTitleView.backgroundColor = KLightGreen;
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width / 2 - 100, 20, 200, 44)];
         label.textAlignment = NSTextAlignmentCenter;
         label.text = @"精彩推荐";
@@ -172,6 +173,11 @@
                 }else{
                     FocusFiveTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"focusFiveTableViewCell" forIndexPath:indexPath];
                     [cell cellConfigureWithFocus:focus];
+                    
+                    // 如果有更多的话, 需要实现cell中点解更多的代理
+                    cell.delegate = self;
+                    
+                    
                     return cell;
                 }
                
@@ -241,6 +247,14 @@
     
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section {
+    view.tintColor = KLightGreen;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section{
+    view.tintColor = KLightGreen;
+}
+
 
 #pragma mark ---收到focusView被点击的操作----
 - (void)focusViewTap: (NSNotification *)notification{
@@ -254,6 +268,18 @@
 
     
 }
+
+
+#pragma mark ----执行点击更多的代理------
+- (void)touchMoreButton:(Focus *)focus{
+    FocusMoreViewController *focusMoreVC = [[FocusMoreViewController alloc] init];
+    focusMoreVC.focus = focus;
+    focusMoreVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:focusMoreVC animated:YES];
+    
+}
+
+
 
 
 - (void)viewDidAppear:(BOOL)animated{

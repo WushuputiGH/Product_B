@@ -25,12 +25,26 @@
         [self.contentView addSubview:self.button];
         self.button.titleLabel.font = [UIFont systemFontOfSize:25];
         [self.button setTitle:@"More ......" forState:(UIControlStateNormal)];
+        [self.button addTarget:self action:@selector(more:) forControlEvents:(UIControlEventTouchUpInside)];
         self.tintColor = [UIColor blackColor];
     
     }
     return self;
 }
 
+
+
+- (void)cellConfigureWithFocus:(Focus *)focus{
+    [super cellConfigureWithFocus:focus];
+    self.focus = focus;
+}
+
+#pragma  mark ----点击更多按钮-----
+- (void)more:(UIButton *)button{
+    
+    [self.delegate touchMoreButton:self.focus];
+    
+}
 
 - (void)layoutSubviews{
     

@@ -12,6 +12,9 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.theImageView.layer.cornerRadius = 20;
+    self.theImageView.clipsToBounds = YES;
+    self.contentView.backgroundColor = KLightGreen;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -10,13 +10,15 @@
 
 @implementation FocusView
 
-/*
+
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     // Drawing code
+    self.theImageView.layer.cornerRadius = 20;
+    self.theImageView.clipsToBounds = YES;
 }
-*/
+
 
 - (void)viewConfigureWithNearByItemS:(NearByItem *)nearByItem{
     
@@ -37,7 +39,6 @@
 - (void)viewConfigureWithNearByItemL:(NearByItem *)nearByItem{
     
     self.neatByItem = nearByItem;
-    
     self.nameLabel.text = nearByItem.name;
     [self.theImageView sd_setImageWithURL:[NSURL URLWithString:nearByItem.cover_route_map_cover]];
 }

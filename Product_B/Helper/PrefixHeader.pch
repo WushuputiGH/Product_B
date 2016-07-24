@@ -53,4 +53,7 @@
 #define KRegistUrl @"http://api2.pianke.me/user/reg"
 
 
+// 颜色
+#define KLightGreen  [UIColor colorWithRed:0/255.0 green:224/255.0 blue:232/255.0 alpha:1.0]
+
 #endif /* PrefixHeader_pch */

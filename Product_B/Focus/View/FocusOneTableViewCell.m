@@ -14,6 +14,8 @@
     // Initialization code
 }
 
+
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
@@ -26,6 +28,7 @@
         self.focusViewOne = [[[NSBundle mainBundle] loadNibNamed:@"FocusView" owner:nil options:nil] firstObject];
         [self.contentView addSubview:self.focusViewOne];
         self.selectionStyle = UITableViewCellSelectionStyleNone;
+        self.backgroundColor = KLightGreen;
     }
     return self;
 }
