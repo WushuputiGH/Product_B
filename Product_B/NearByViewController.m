@@ -79,6 +79,7 @@
         _theScrollView.showsHorizontalScrollIndicator = NO;
         _theScrollView.showsVerticalScrollIndicator = NO;
         _theScrollView.delegate = self;
+        _theScrollView.backgroundColor = KLightGreen;
         
         
     }
@@ -93,6 +94,7 @@
         _nearByAllVC.theId = self.theId;
         _nearByAllVC.theType = self.theType;
         _nearByAllVC.sortType = self.sortType;
+        _nearByAllVC.isNotHaveTabBar = self.isNotHaveTabBar;
     }
     return _nearByAllVC;
 }
@@ -104,6 +106,7 @@
         _nearByTypeScenic.theId = self.theId;
         _nearByTypeScenic.theType = self.theType;
         _nearByTypeScenic.sortType = self.sortType;
+        _nearByTypeScenic.isNotHaveTabBar = self.isNotHaveTabBar;
     }
     return _nearByTypeScenic;
 }
@@ -115,6 +118,7 @@
         _nearByTypeHotel.theId = self.theId;
         _nearByTypeHotel.theType = self.theType;
         _nearByTypeHotel.sortType = self.sortType;
+        _nearByTypeHotel.isNotHaveTabBar = self.isNotHaveTabBar;
     }
     return _nearByTypeHotel;
 }
@@ -126,6 +130,7 @@
         _nearByTypeRestaurant.theId = self.theId;
         _nearByTypeRestaurant.theType = self.theType;
         _nearByTypeRestaurant.sortType = self.sortType;
+        _nearByTypeRestaurant.isNotHaveTabBar = self.isNotHaveTabBar;
     }
     return _nearByTypeRestaurant;
 }
@@ -136,6 +141,7 @@
         _nearByTypeEntertainment.theId = self.theId;
         _nearByTypeEntertainment.theType = self.theType;
         _nearByTypeEntertainment.sortType = self.sortType;
+        _nearByTypeEntertainment.isNotHaveTabBar = self.isNotHaveTabBar;
     }
     return _nearByTypeEntertainment;
 }
@@ -147,6 +153,7 @@
         _nearByTypeShop.theId = self.theId;
         _nearByTypeShop.theType = self.theType;
         _nearByTypeShop.sortType = self.sortType;
+        _nearByTypeShop.isNotHaveTabBar = self.isNotHaveTabBar;
     }
     return _nearByTypeShop;
 }
@@ -179,6 +186,22 @@
     self.index = 0;
     [self.navigationController.navigationBar addSubview:self.nearByHeaderView];
     
+    // 将rightBarButtonItem设置为nil;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:(UIBarButtonItemStylePlain) target:self action:@selector(back:)];
+    
+    if (self.isNotHaveTabBar) {
+        // 若果没有底部的tabbar, 那么添加一个button
+        UIButton *backButton = [UIButton buttonWithType:(UIButtonTypeSystem)];
+        backButton.tintColor = [UIColor whiteColor];
+        [backButton setImage:[UIImage imageNamed:@"arrow"] forState:(UIControlStateNormal)];
+        backButton.frame = CGRectMake(10, 20, 44, 44);
+        [self.nearByHeaderView addSubview:backButton];
+        [backButton addTarget:self action:@selector(back:) forControlEvents:(UIControlEventTouchUpInside)];
+        
+        // 更改nearByHeaderView的标题, 变成热门
+        [self.nearByHeaderView.theButton setTitle:@"热门" forState:(UIControlStateNormal)];
+        
+    }
     
 }
 
@@ -202,6 +225,7 @@
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.translucent = NO;
     self.nearByNavigationScrollView.hidden = NO;
+    
     self.nearByHeaderView.hidden = NO;
 
 }
@@ -282,6 +306,13 @@
     NSInteger index = button.tag - 100;
     self.index = index;
     
+}
+
+
+#pragma mark ----返回按钮, 用户pop----
+
+- (void)back:(UIButton *)button{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

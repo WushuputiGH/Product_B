@@ -19,7 +19,7 @@
 
 // 定义tabelview的大小
 #define kFrameOfTabelView CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width , [UIScreen mainScreen].bounds.size.height - 64 - 49)
-
+#define kFrameOfTabelViewL CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width , [UIScreen mainScreen].bounds.size.height - 64 - 40)
 @interface NearByTableViewController ()<UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate>
 
 
@@ -41,7 +41,12 @@
 
 - (UITableView *)nearByTableView{
     if (!_nearByTableView) {
-        _nearByTableView = [[UITableView alloc] initWithFrame:kFrameOfTabelView style:(UITableViewStylePlain)];
+        if (!self.isNotHaveTabBar) {
+            _nearByTableView = [[UITableView alloc] initWithFrame:kFrameOfTabelView style:(UITableViewStylePlain)];
+        }else{
+            _nearByTableView = [[UITableView alloc] initWithFrame:kFrameOfTabelViewL style:(UITableViewStylePlain)];
+        }
+        
         _nearByTableView.dataSource = self;
         _nearByTableView.delegate =self;
         _nearByTableView.rowHeight = 150;
@@ -81,6 +86,7 @@
     
     // 首先需要添加tabelView
     [self.view addSubview:self.nearByTableView];
+    self.nearByTableView.hidden = YES;
     
     // 设置数据请求类型
     self.dataRequestType = DataRequestTypeFirst;
@@ -208,7 +214,7 @@
             [self.nearByTableView.mj_footer endRefreshing];
         }
         
-        
+        self.nearByTableView.hidden = NO;
         // 刷洗tabelView
         [self.nearByTableView reloadData];
         
