@@ -109,9 +109,10 @@
     // 请求数据
     // 刚开始的时候, 就执行定位
     /**
-     *  注意定位信息是异步的, 一次网络请求数据应该放在位置信息更新之后进行
+     *  注意定位信息是异步的, 因此网络请求数据应该放在位置信息更新之后进行
      */
-    [self.locationManager requestLocation];
+//    [self.locationManager requestLocation];
+    [self requestData];
     
     
     self.nearByTableView.backgroundColor = [UIColor colorWithRed:250.0 / 255 green:102.0 / 255 blue:102.0 / 255 alpha:1];
@@ -279,6 +280,7 @@
 }
 
 #pragma mark ---执行定位的代理方法-----
+
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
     
     // 首先获取位置信息
@@ -290,8 +292,66 @@
 
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
+    
+    // 定位失败
+ 
+    
     NSLog(@"%@", error.description);
+    
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied) {
+        
+        [self locationErrorAleartWith:@"未开启定位"];
+        //        [manager requestWhenInUseAuthorization];
+        
+    }else{
+        if (error.code == kCLErrorDenied) {
+            // 定位服务被拒接
+            [self locationErrorAleartWith:@"定位功能被禁用"];
+        }else{
+            [self locationErrorAleartWith:@"定位失败, 稍后再试"];
+        }
+    }
+    
+    
+    [manager stopUpdatingLocation];
+    
 }
+
+#pragma mark ----定位失败执行的方法-----
+
+- (void)locationErrorAleartWith:(NSString *)errorString{
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"定位失败" message:errorString preferredStyle:(UIAlertControllerStyleAlert)];
+    
+    
+    
+    
+    if ([errorString isEqualToString:@"定位功能被禁用"] || [errorString isEqualToString:@"未开启定位"] ) {
+        
+        UIAlertAction *turnSet= [UIAlertAction actionWithTitle:@"去设置" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+            
+            if ([errorString isEqualToString:@"定位功能被禁用"]) {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+            }
+            
+            if ([errorString isEqualToString:@"未开启定位"]) {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=LOCATION_SERVICES"]];
+            }
+            [alertVC dismissViewControllerAnimated:YES completion:nil];
+            
+        }];
+        [alertVC addAction:turnSet];
+    }
+    
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"稍后" style:(UIAlertActionStyleCancel) handler:^(UIAlertAction * _Nonnull action) {
+        [alertVC dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
+    [alertVC addAction:cancel];
+    [self presentViewController:alertVC animated:YES completion:nil];
+    
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

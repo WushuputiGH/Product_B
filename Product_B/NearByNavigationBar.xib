@@ -53,9 +53,10 @@
                             </state>
                         </button>
                     </subviews>
+                    <color key="backgroundColor" red="0.27964729070663452" green="0.87931656837463379" blue="0.91589158773422241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.27964729070663452" green="0.87931656837463379" blue="0.91589158773422241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="xXr-li-i9y" secondAttribute="bottom" id="d0Z-nH-Nx0"/>
                 <constraint firstAttribute="trailing" secondItem="xXr-li-i9y" secondAttribute="trailing" id="l9K-CY-x15"/>

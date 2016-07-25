@@ -91,7 +91,7 @@
         
         // 添加到scrollerview上面
         [self.theScrollview addSubview:imageView];
-        imageView.backgroundColor = [UIColor orangeColor];
+//        imageView.backgroundColor = [UIColor orangeColor];
         [imageView sd_setImageWithURL:url];
     }
     theScollerViewContentWidth -= 5;
@@ -122,7 +122,7 @@
         
         // 添加到scrollerview上面
         [self.theScrollview addSubview:imageView];
-        imageView.backgroundColor = [UIColor orangeColor];
+//        imageView.backgroundColor = [UIColor orangeColor];
         [imageView sd_setImageWithURL:url];
     }
     theScollerViewContentWidth -= 5;

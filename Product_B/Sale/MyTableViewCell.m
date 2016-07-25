@@ -18,7 +18,7 @@
     self.PersonImage.layer.masksToBounds = YES;
     self.titleLable.text = model.title;
     self.priceLable.text = [NSString stringWithFormat:@"$%@",model.price];
-    [self.priceLable setTextColor:[UIColor orangeColor]];
+//    [self.priceLable setTextColor:[UIColor orangeColor]];
     self.bigLable.text = [NSString stringWithFormat:@"%@ ,%@ ,%ld人喜欢",model.date_str,model.address,(long)model.like_count];
 }
 
