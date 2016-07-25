@@ -18,6 +18,35 @@
 }
 */
 
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.backgroundColor = KLightGreen;
+    }
+    return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.backgroundColor = KLightGreen;
+    }
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.backgroundColor = KLightGreen;
+    }
+    return self;
+}
+
+
 - (void)changeFrameWithIndex:(NSInteger)Index{
     
     // 获取对应Button的frame

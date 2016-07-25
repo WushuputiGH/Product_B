@@ -26,6 +26,9 @@
                 <constraint firstItem="g1G-WQ-bB7" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottomMargin" id="olk-Zu-fvj"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="theButton" destination="g1G-WQ-bB7" id="gNY-pZ-xzJ"/>
+            </connections>
             <point key="canvasLocation" x="468.5" y="323.5"/>
         </view>
     </objects>

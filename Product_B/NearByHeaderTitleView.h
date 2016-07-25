@@ -10,4 +10,6 @@
 
 @interface NearByHeaderTitleView : UIView
 
+@property (strong, nonatomic) IBOutlet UIButton *theButton;
+
 @end

@@ -459,6 +459,7 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "Product_B/Introduce/Controllers/IntroCollectViewController.m"
             timestampString = "491142718.631807"
             startingColumnNumber = "9223372036854775807"
@@ -499,6 +500,16 @@
                   offsetFromSymbolStart = "77">
                </Location>
             </Locations>
+=======
+            filePath = "Product_B/NearByViewController.m"
+            timestampString = "491119140.110896"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "402"
+            endingLineNumber = "402"
+            landmarkName = "-locationManager:didFailWithError:"
+            landmarkType = "5">
+>>>>>>> d44be34c38d01a882a4860ce362a676ac840513f
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -507,6 +518,7 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "Product_B/Introduce/Controllers/IntroCollectViewController.m"
             timestampString = "491142742.064799"
             startingColumnNumber = "9223372036854775807"
@@ -514,6 +526,15 @@
             startingLineNumber = "38"
             endingLineNumber = "38"
             landmarkName = "-requestData"
+=======
+            filePath = "Product_B/NearByViewController.m"
+            timestampString = "491123804.242656"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "434"
+            endingLineNumber = "434"
+            landmarkName = "-locationErrorAleartWith:"
+>>>>>>> d44be34c38d01a882a4860ce362a676ac840513f
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -523,6 +544,7 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "Product_B/Introduce/Controllers/IntroCollectViewController.m"
             timestampString = "491143416.641786"
             startingColumnNumber = "9223372036854775807"
@@ -530,6 +552,15 @@
             startingLineNumber = "66"
             endingLineNumber = "66"
             landmarkName = "-requestData"
+=======
+            filePath = "Product_B/NearByViewController.m"
+            timestampString = "491123804.242656"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "439"
+            endingLineNumber = "439"
+            landmarkName = "-locationErrorAleartWith:"
+>>>>>>> d44be34c38d01a882a4860ce362a676ac840513f
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -539,6 +570,7 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "Product_B/Introduce/Controllers/IntroCollectViewController.m"
             timestampString = "491143416.641786"
             startingColumnNumber = "9223372036854775807"
@@ -546,6 +578,15 @@
             startingLineNumber = "54"
             endingLineNumber = "54"
             landmarkName = "-requestData"
+=======
+            filePath = "Product_B/NearByViewController.m"
+            timestampString = "491123804.242656"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "443"
+            endingLineNumber = "443"
+            landmarkName = "-locationErrorAleartWith:"
+>>>>>>> d44be34c38d01a882a4860ce362a676ac840513f
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -555,6 +596,7 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "Product_B/Introduce/Controllers/IntroCollectViewController.m"
             timestampString = "491143416.641786"
             startingColumnNumber = "9223372036854775807"
@@ -562,6 +604,47 @@
             startingLineNumber = "46"
             endingLineNumber = "46"
             landmarkName = "-requestData"
+=======
+            filePath = "Product_B/NearByViewController.m"
+            timestampString = "491123804.242656"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "438"
+            endingLineNumber = "438"
+            landmarkName = "-locationErrorAleartWith:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Product_B/NearByViewController.m"
+            timestampString = "491123804.242656"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "466"
+            endingLineNumber = "466"
+            landmarkName = "-reLocation:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Product_B/NearByTableViewController.m"
+            timestampString = "491123104.294599"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "287"
+            endingLineNumber = "287"
+            landmarkName = "-locationManager:didUpdateLocations:"
+>>>>>>> d44be34c38d01a882a4860ce362a676ac840513f
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
