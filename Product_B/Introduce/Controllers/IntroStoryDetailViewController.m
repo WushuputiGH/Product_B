@@ -48,6 +48,7 @@
 
 //            model.text // 请求下来的字符串
             NSMutableString *str;
+            /*
             if (model.text.length > 0)
             {
                 str = [NSMutableString stringWithString:model.text];
@@ -60,6 +61,22 @@
             }else{
                 str = [NSMutableString stringWithString:@""];
             }
+             */
+            
+            
+            if (model.text.length >0 && model.text.length <= 100)
+            {
+                str = [NSMutableString stringWithString:model.text];
+            }else if (model.text.length > 180){
+                
+                str = [NSMutableString stringWithString:model.text];
+                str = [str substringToIndex:179];
+                
+            }else{
+                str = [NSMutableString stringWithString:@""];
+            }
+                        
+            
             
 //            photo.caption = model.text;
             photo.caption = str;

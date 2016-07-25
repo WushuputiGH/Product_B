@@ -21,6 +21,15 @@
 
 @implementation IntroCollectViewController
 
+#pragma mark -- 属性懒加载
+- (NSMutableArray *)modelArray
+{
+    if (!_modelArray) {
+        _modelArray = [NSMutableArray array];
+    }
+    return _modelArray;
+}
+
 #pragma mark 数据请求
 - (void)requestData
 {
@@ -28,13 +37,69 @@
         
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
         
-        self.modelArray = [IntroStoryCollectModel storyCollectModelConfigureJsonDic:dic];
+//        self.modelArray = [IntroStoryCollectModel storyCollectModelConfigureJsonDic:dic];
+//        [self.collectV reloadData];
+        
+        NSMutableArray *array = [IntroStoryCollectModel storyCollectModelConfigureJsonDic:dic];
+        NSArray *allId = [self.modelArray valueForKeyPath:@"spot_id"];
+        
+        NSMutableArray *allIdString = [NSMutableArray array];
+        
+        for (NSNumber *theId in allId)
+        {
+            NSString *theIdString = theId.description;
+            [allIdString addObject:theIdString];
+        }
+        
+        for (IntroStoryCollectModel *model in array)
+        {
+            NSString *idString = model.spot_id.description;
+            
+            if (![allIdString containsObject:idString])
+            {
+                [self.modelArray addObject:model];
+            }
+            
+        }
+        
+        
         [self.collectV reloadData];
+        
+        [self.collectV.mj_header endRefreshing];
+        
+        
     
     } error:^(NSError *error) {
     
     }];
 }
+
+#pragma mark 加载更多数据
+- (void)reloadMoreData
+{
+    [YRequestManager requestWithUrlString:[NSString stringWithFormat:@"http://api.breadtrip.com/v2/new_trip/spot/hot/list/?start=%ld", self.modelArray.count] parDic:nil requestType:RequestGET finish:^(NSData *data) {
+        
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        NSMutableArray *array = [IntroStoryCollectModel storyCollectModelConfigureJsonDic:dic];
+        
+        for (IntroStoryCollectModel *model in array)
+        {
+            if (![self.modelArray containsObject:model])
+            {
+                [self.modelArray addObject:model];
+            }
+            
+            //            [self.modelArray addObject:model];
+        }
+        
+        [self.collectV reloadData];
+        [self.collectV.mj_footer endRefreshing];
+        
+    } error:^(NSError *error) {
+        
+    }];
+}
+
 
 - (void)initCollectView
 {
@@ -54,7 +119,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self requestData];
+//    [self requestData];
     
     self.view.backgroundColor = KCOLOR(255, 255, 255);
     
@@ -63,6 +128,20 @@
     self.navigationController.navigationBar.translucent = NO;
     
     [self initCollectView];
+    
+    self.collectV.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        
+        [self requestData];
+    }];
+    
+    [self.collectV.mj_header beginRefreshing];
+
+    
+    self.collectV.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        
+        [self reloadMoreData];
+    }];
+    
     
     
     // Do any additi onal setup after loading the view.

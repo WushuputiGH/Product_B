@@ -402,7 +402,7 @@
 		796939FD1D34DCE80032220B /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestManager.h; sourceTree = "<group>"; };
 		796939FE1D34DCE80032220B /* RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestManager.m; sourceTree = "<group>"; };
 		79693A001D34DD0F0032220B /* NearByHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NearByHeader.h; sourceTree = "<group>"; };
-		79693A011D34DD780032220B /* NearByPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NearByPrefixHeader.pch; sourceTree = "<group>"; };
+		79693A011D34DD780032220B /* NearByPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NearByPrefixHeader.pch; path = ../NearByPrefixHeader.pch; sourceTree = "<group>"; };
 		79693A021D34E4960032220B /* NearByTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearByTableViewCell.h; sourceTree = "<group>"; };
 		79693A031D34E4960032220B /* NearByTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearByTableViewCell.m; sourceTree = "<group>"; };
 		79693A041D34E4960032220B /* NearByTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearByTableViewCell.xib; sourceTree = "<group>"; };
@@ -550,10 +550,10 @@
 		7914F6011D42483D00D398FC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7914F6021D42483D00D398FC /* IntroCollectViewController.h */,
-				7914F6031D42483D00D398FC /* IntroCollectViewController.m */,
 				7914F6041D42483D00D398FC /* IntroduceMainViewController.h */,
 				7914F6051D42483D00D398FC /* IntroduceMainViewController.m */,
+				7914F6021D42483D00D398FC /* IntroCollectViewController.h */,
+				7914F6031D42483D00D398FC /* IntroCollectViewController.m */,
 				7914F6061D42483D00D398FC /* IntroScrollWebViewController.h */,
 				7914F6071D42483D00D398FC /* IntroScrollWebViewController.m */,
 				7914F6081D42483D00D398FC /* IntroStoryDetailViewController.h */,
@@ -908,7 +908,6 @@
 				796939B31D34C2390032220B /* ViewController.h */,
 				796939B41D34C2390032220B /* ViewController.m */,
 				796939B61D34C2390032220B /* Main.storyboard */,
-				79693A011D34DD780032220B /* NearByPrefixHeader.pch */,
 				79B73E431D43212600C7C766 /* Sale */,
 				7914F6001D42483D00D398FC /* Introduce */,
 				7933EB8A1D38E68F0072B64D /* Third */,
@@ -1042,6 +1041,7 @@
 				79B73E4A1D43212600C7C766 /* Preduct.m */,
 				79B73E4C1D43212600C7C766 /* SaleViewController.h */,
 				79B73E4D1D43212600C7C766 /* SaleViewController.m */,
+				79693A011D34DD780032220B /* NearByPrefixHeader.pch */,
 			);
 			path = Sale;
 			sourceTree = "<group>";

@@ -100,7 +100,9 @@
     [YRequestManager requestWithUrlString:KIntroMainCTURL parDic:nil requestType:RequestGET finish:^(NSData *data) {
         
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-        self.next_start = [dic objectForKey:@"next_start"];
+
+        self.next_start = dic[@"data"][@"next_start"];
+
         
         // collectView数据
         self.collectArray = [IntroMainCollectModel collectConfigureJsonDic:dic];
@@ -108,14 +110,50 @@
         [self.collectView reloadData];
         
         // tableView数据
-        self.tableArray = [IntroMainTableModel tableModelConfigureJsonDic:dic];
+//        self.tableArray = [IntroMainTableModel tableModelConfigureJsonDic:dic];
+        
+        NSMutableArray *array = [IntroMainTableModel tableModelConfigureJsonDic:dic];
+        for (IntroMainTableModel *model in array)
+        {
+            [self.tableArray addObject:model];
+        }
+        
         [self.mainTableView reloadData];
         
+        [self.mainTableView.mj_header endRefreshing];
         
     } error:^(NSError *error) {
         
     }];
 
+}
+
+#pragma mark -- 加载更多数据
+- (void)reloadMoreData
+{
+    [self.mainTableView.mj_footer beginRefreshing];
+    
+    
+    [YRequestManager requestWithUrlString:[NSString stringWithFormat:@"http://api.breadtrip.com/v2/index/?next_start=%@", self.next_start] parDic:nil requestType:RequestGET finish:^(NSData *data) {
+        
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        
+        self.next_start = dic[@"data"][@"next_start"];
+        NSLog(@"%@", self.next_start);
+        
+        NSMutableArray *array = [IntroMainTableModel tableModelConfigureJsonDic:dic];
+        for (IntroMainTableModel *model in array) {
+            [self.tableArray addObject:model];
+        }
+        //        self.tableArray = [IntroMainTableModel tableModelConfigureJsonDic:dic];
+        
+        
+        [self.mainTableView reloadData];
+        [self.mainTableView.mj_footer endRefreshing];
+        
+    } error:^(NSError *error) {
+        
+    }];
 }
 
 
@@ -232,6 +270,22 @@
     [self initCollectView];
     [self.view addSubview:self.headView];
     [self.view addSubview:self.mainTableView];
+    
+    
+    self.mainTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        
+        [self requestData1];
+    }];
+    
+    [self.mainTableView.mj_header beginRefreshing];
+    
+    
+    self.mainTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        
+        [self reloadMoreData];
+    }];
+    
+    
     
     // Do any additional setup after loading the view.
 }
