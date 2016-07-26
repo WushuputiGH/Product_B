@@ -83,9 +83,9 @@
                     <constraint firstItem="jBb-M6-obC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="fTI-5Y-j0Z"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.27964729070663452" green="0.87931656837463379" blue="0.91589158773422241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
-                <outlet property="backView" destination="jBb-M6-obC" id="13g-wz-Dtm"/>
+                <outlet property="backView" destination="jBb-M6-obC" id="QNy-S7-B62"/>
                 <outlet property="nameLabel" destination="soV-cj-7zs" id="nBM-nh-v4i"/>
                 <outlet property="theDistanceAndWishLabel" destination="lrM-1A-Rmj" id="JCa-AS-Bwm"/>
                 <outlet property="theImageView" destination="QxE-IR-3dl" id="wLh-gU-z4w"/>

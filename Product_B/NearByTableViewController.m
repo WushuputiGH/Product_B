@@ -115,7 +115,8 @@
     [self requestData];
     
     
-    self.nearByTableView.backgroundColor = [UIColor colorWithRed:250.0 / 255 green:102.0 / 255 blue:102.0 / 255 alpha:1];
+//    self.nearByTableView.backgroundColor = [UIColor colorWithRed:250.0 / 255 green:102.0 / 255 blue:102.0 / 255 alpha:1];
+    self.nearByTableView.backgroundColor = KLightGreen;
 }
 
 
