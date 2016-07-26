@@ -18,4 +18,13 @@
 }
 */
 
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.backgroundColor = KLightGreen;
+    }
+    return self;
+}
+
 @end

@@ -16,5 +16,9 @@
 @property (nonatomic, strong, readwrite) NSNumber *theType;
 @property (nonatomic, assign, readwrite) SortType sortType;
 
+/**
+ *  定义属性, 用于判断是否有tabBar(即: 从何处跳转)
+ */
+@property (nonatomic, assign, readwrite) BOOL isNotHaveTabBar;
 
 @end

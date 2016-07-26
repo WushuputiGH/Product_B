@@ -18,6 +18,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *theTipsCountLabel;
 @property (strong, nonatomic) IBOutlet UILabel *theDistanceAndWishLabel;
 
+
 @property (nonatomic, strong, readwrite) HCSStarRatingView *starRatingView;
 
 

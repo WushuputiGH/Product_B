@@ -35,9 +35,13 @@
     self.dataArray = [NSMutableArray array];
 
     [YRequestManager requestWithUrlString:string parDic:nil requestType:RequestGET finish:^(NSData *data) {
+        
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        
         NSArray *array = [dic valueForKey:@"product_list"];
-        for (NSDictionary *dic1 in array) {
+        
+        for (NSDictionary *dic1 in array)
+        {
             Preduct *pruduct = [[Preduct alloc]init];
             [pruduct setValuesForKeysWithDictionary:dic1];
             
@@ -68,15 +72,20 @@
     
     [YRequestManager requestWithUrlString:string parDic:nil requestType:RequestGET finish:^(NSData *data) {
         NSString *dic = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingMutableContainers) error:nil];
+        
         NSArray *array = [dic valueForKey:@"product_list"];
-        for (NSDictionary *dic1 in array) {
+        
+        for (NSDictionary *dic1 in array)
+        {
             Preduct *pruduct = [[Preduct alloc]init];
             [pruduct setValuesForKeysWithDictionary:dic1];
             NSDictionary *d = [dic1 valueForKey:@"user"];
             [pruduct setValuesForKeysWithDictionary:d];
             [self.dataArray addObject:pruduct];
         }
+        
         [self.tableView.mj_footer endRefreshing];
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
             
@@ -109,6 +118,7 @@
     self.item = [[UIBarButtonItem alloc] initWithTitle:@"北京" style:(UIBarButtonItemStylePlain) target:self action:@selector(click)];
     [self.navigationItem setLeftBarButtonItem:_item];
     [self creatTableView];
+    
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self reloadDate];
 

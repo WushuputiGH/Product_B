@@ -275,7 +275,26 @@
         for (IntroTableDetailModel *model in self.modelArray)
         {
             [self.photos addObject:model.photo];
-            [self.texts addObject:model.text];
+//            [self.texts addObject:model.text];
+            
+            NSMutableString *str;
+            
+            if (model.text.length >0 && model.text.length <= 180)
+            {
+                str = [NSMutableString stringWithString:model.text];
+                
+            }else if (model.text.length > 180){
+                
+                str = [NSMutableString stringWithString:model.text];
+                str = [str substringToIndex:179];
+                
+            }else{
+                
+                str = [NSMutableString stringWithString:@""];
+            }
+            
+            [self.texts addObject:str];
+            
         }
         
         self.trackpoints_thumbnail_image = [dic valueForKeyPath:@"trackpoints_thumbnail_image"];

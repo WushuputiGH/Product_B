@@ -65,7 +65,7 @@
         </view>
     </objects>
     <resources>
-        <image name="gear.png" width="64" height="64"/>
+        <image name="gear.png" width="21" height="21"/>
         <image name="罗小黑.png" width="186" height="178"/>
     </resources>
 </document>

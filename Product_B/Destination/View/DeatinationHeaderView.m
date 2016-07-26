@@ -53,13 +53,17 @@
     
     self.theButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [self.contentView addSubview:self.theButton];
-    self.theButton.backgroundColor = [UIColor orangeColor];
+//    self.theButton.backgroundColor = [UIColor orangeColor];
     // 定义button的背景颜色以及圆角
     self.theButton.layer.cornerRadius = 15;
     self.theStretchImage.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.frame.size.height - 15);
     self.theStretchImage.contentMode = UIViewContentModeScaleAspectFill;
     self.theStretchImage.clipsToBounds = YES;
     self.theButton.frame = CGRectMake(self.frame.size.width / 2 - 15, self.frame.size.height - 30, 30, 30);
+//    [self.theButton setImage:[UIImage imageNamed:@"xiaohei" ]forState:(UIControlStateNormal)];
+    [self.theButton setBackgroundImage:[UIImage imageNamed:@"xiaohei" ] forState:UIControlStateNormal];
+    
+    self.theButton.hidden = YES;
 
     
 //    // 添加约束

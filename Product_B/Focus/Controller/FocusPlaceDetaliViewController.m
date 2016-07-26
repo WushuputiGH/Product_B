@@ -247,7 +247,7 @@
             nearByViewController.theId = self.focusViewModel.focusViewId;
             nearByViewController.theType = self.focusViewModel.type;
             nearByViewController.sortType = SortTypeDefault;
-            
+            nearByViewController.isNotHaveTabBar = YES;
             [self.navigationController pushViewController:nearByViewController animated:YES];
         }
         

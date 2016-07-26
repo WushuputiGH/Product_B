@@ -28,7 +28,9 @@
     
     self.backView.layer.cornerRadius = 20;
     self.theImageView.layer.cornerRadius = 20;
-
+    self.theImageView.clipsToBounds = YES;
+    self.backView.layer.borderWidth = 1;
+    self.backView.layer.borderColor = [UIColor whiteColor].CGColor;
     
 }
 
