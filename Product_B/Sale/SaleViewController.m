@@ -102,7 +102,10 @@
     [super viewDidLoad];
     self.cityArray =[NSArray arrayWithObjects:@"北京",@"上海",@"深圳",@"巴黎",@"东京",@"广州",@"赫尔辛格",@"天津",@"武汉",@"香港",@"悉尼", nil];
     self.navigationItem.title = @"特价~";
-    self.navigationController.navigationBar.backgroundColor = [UIColor blueColor];
+//    self.navigationController.navigationBar.backgroundColor = [UIColor blackColor];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:KCOLOR(255, 255, 255)}];
+
+      self.navigationController.navigationBar.barTintColor = KCOLOR(0, 195, 209);
     self.item = [[UIBarButtonItem alloc] initWithTitle:@"北京" style:(UIBarButtonItemStylePlain) target:self action:@selector(click)];
     [self.navigationItem setLeftBarButtonItem:_item];
     [self creatTableView];
