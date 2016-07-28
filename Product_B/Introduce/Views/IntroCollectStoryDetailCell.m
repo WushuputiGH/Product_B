@@ -2,7 +2,7 @@
 //  IntroCollectStoryDetailCell.m
 //  Product_B
 //
-//  Created by lanou on 16/7/15.
+//  Created by by wushuputi on 16/7/15.
 //  Copyright © 2016年 YMN. All rights reserved.
 //
 

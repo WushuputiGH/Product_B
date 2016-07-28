@@ -2,7 +2,7 @@
 //  Product_BTests.m
 //  Product_BTests
 //
-//  Created by lanou on 16/7/12.
+//  Created by by wushuputi on 16/7/12.
 //  Copyright © 2016年 H. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  UserInfoManager.h
 //  Product-A
 //
-//  Created by lanou on 16/7/1.
+//  Created by by wushuputi on 16/7/1.
 //  Copyright © 2016年 tongwei. All rights reserved.
 //
 

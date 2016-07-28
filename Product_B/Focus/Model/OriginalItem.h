@@ -2,7 +2,7 @@
 //  OriginalItem.h
 //  Product_B
 //
-//  Created by lanou on 16/7/18.
+//  Created by by wushuputi on 16/7/18.
 //  Copyright © 2016年 H. All rights reserved.
 //
 

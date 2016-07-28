@@ -2,7 +2,7 @@
 //  TripsTableViewConatroller.m
 //  Product_B
 //
-//  Created by lanou on 16/7/15.
+//  Created by by wushuputi on 16/7/15.
 //  Copyright © 2016年 H. All rights reserved.
 //
 

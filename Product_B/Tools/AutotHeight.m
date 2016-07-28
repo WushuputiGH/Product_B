@@ -2,8 +2,8 @@
 //  AutotHeight.m
 //  UI12_UITableViewCell
 //
-//  Created by lanou on 16/5/12.
-//  Copyright © 2016年 lanou. All rights reserved.
+//  Created by wushuputi on 16/5/12.
+//  Copyright © 2016年 by wushuputi. All rights reserved.
 //
 
 #import "AutotHeight.h"

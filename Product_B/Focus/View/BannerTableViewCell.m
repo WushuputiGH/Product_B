@@ -2,7 +2,7 @@
 //  BannerTableViewCell.m
 //  Product_B
 //
-//  Created by lanou on 16/7/16.
+//  Created  on 16/7/16.
 //  Copyright © 2016年 H. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  RequestManager.m
 //  DouBanProgarm
 //
-//  Created by lanou on 16/5/23.
+//  Created by by wushuputi on 16/5/23.
 //  Copyright © 2016年 an. All rights reserved.
 //
 

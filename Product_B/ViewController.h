@@ -2,7 +2,7 @@
 //  ViewController.h
 //  Product_B
 //
-//  Created by lanou on 16/7/12.
+//  Created by by wushuputi on 16/7/12.
 //  Copyright © 2016年 H. All rights reserved.
 //
 

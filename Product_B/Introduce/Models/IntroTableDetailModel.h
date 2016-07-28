@@ -2,7 +2,7 @@
 //  IntroTableDetailModel.h
 //  Product_B
 //
-//  Created by lanou on 16/7/14.
+//  Created by by wushuputi on 16/7/14.
 //  Copyright © 2016年 YMN. All rights reserved.
 //
 

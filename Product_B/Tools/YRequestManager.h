@@ -2,7 +2,7 @@
 //  RequestManager.h
 //  UI18LessonCocoapods
 //
-//  Created by lanou on 16/6/16.
+//  Created by by wushuputi on 16/6/16.
 //  Copyright © 2016年 ycw. All rights reserved.
 //
 
